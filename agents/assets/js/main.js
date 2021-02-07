@@ -1,1 +1,3 @@
-import Header from  "../../components/Header.js"
+import "../../components/Header.js";
+import "../../components/EventsList.js";
+
