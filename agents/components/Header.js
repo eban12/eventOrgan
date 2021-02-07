@@ -55,6 +55,7 @@ a:hover {
     background: #fff;
     position: absolute;
     right: 0;
+    left: -20px;
     top: 63px;
     box-shadow: 0px 6px 12px -6px rgba(0,0,0,0.65);
     display: none;
@@ -115,12 +116,12 @@ li a:hover {
                 <p>J</p>
             </div>
             <a>Jorka</a>
-        </div>
-        <div class="dropdown">
-            <ul>
-                <li><a><i class="fa fa-cog" aria-hidden="true"></i> Account Settings</a></li>
-                <li><a><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></li>
-            </ul>
+            <div class="dropdown">
+                <ul>
+                    <li><a><i class="fa fa-cog" aria-hidden="true"></i> Account Settings</a></li>
+                    <li><a><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
@@ -132,12 +133,13 @@ class Header extends HTMLElement {
 
     const el = template.content.querySelector(`#${this.getAttribute("data-current")}`);
     el.classList.add("active");
-    const dropdown = template.content.querySelector(".dropdown")
-    template.content.querySelector(".dropdown-container").addEventListener("mouseenter", () => {
+    const dropdown = template.content.querySelector(".dropdown");
+    const dropdownContainer = template.content.querySelector(".dropdown-container");
+    dropdownContainer.addEventListener("mouseenter", () => {
         dropdown.style.display = "block";
     })
 
-    dropdown.addEventListener("mouseleave", () => {
+    dropdownContainer.addEventListener("mouseleave", () => {
         dropdown.style.display = "none";
     })
   }
