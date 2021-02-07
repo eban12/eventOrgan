@@ -1,0 +1,21 @@
+.logo-font{
+    font-family: 'Kaushan Script', cursive;
+    padding: 0.5rem;
+}
+.logo-font:hover{
+    background-color: #eee;
+}
+.logo-icon{
+    height: 2rem;
+    width: 2rem;
+}
+.all-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.all-cards > li{
+    flex: auto;
+}
+li{
+    list-style-type: none;
+}
