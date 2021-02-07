@@ -70,6 +70,10 @@ ul {
     border-bottom: solid 1px #f0f0f0;
 }
 
+li:hover {
+    background: #f5f5f5;
+}
+
 li a {
     padding: 10px 15px;
     font-size: 16px;
@@ -82,7 +86,6 @@ i {
 
 li a:hover {
     color: gray;
-    background: #f5f5f5;
 }
 
 .avatar {
