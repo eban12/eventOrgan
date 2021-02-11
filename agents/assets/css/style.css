@@ -142,3 +142,48 @@ header-component {
 .address-form .input-group {
     width: 48%;
 }
+
+.save-discard {
+    padding: 15px 20%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    z-index: 12;
+    background: #fff;
+    border-top: 1px solid #dbdae3;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-primary {
+    background: #db1634;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #db304a;
+}
+
+.btn-outline {
+    border: 2px solid #c0bfc2;
+}
+
+.btn-outline:hover {
+    border-color: #929296;
+}
