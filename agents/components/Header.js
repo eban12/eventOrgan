@@ -132,7 +132,9 @@ class Header extends HTMLElement {
     super();
 
     const el = template.content.querySelector(`#${this.getAttribute("data-current")}`);
-    el.classList.add("active");
+    if (el) {
+        el.classList.add("active");
+    }
     const dropdown = template.content.querySelector(".dropdown");
     const dropdownContainer = template.content.querySelector(".dropdown-container");
     dropdownContainer.addEventListener("mouseenter", () => {
