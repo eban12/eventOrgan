@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    margin-top: 70px;
+    margin: 70px 0;
     padding: 40px;
 }
 
@@ -119,4 +119,26 @@ header-component {
     border: 1px solid #dbdae3;
     border-radius: 3px;
     padding: 10px 15px;
+}
+
+.active-radio label {
+    border-color: rgb(17, 131, 68);
+    color: rgb(17, 131, 68);
+    background-color: rgba(24, 151, 224, 0.055);
+}
+
+.address-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.address-form h2 {
+    width: 100%;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.address-form .input-group {
+    width: 48%;
 }
