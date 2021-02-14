@@ -133,7 +133,6 @@
                                 </input>
                             </div>
                         </div>
-        
                     </div>
                 </section>
         
@@ -183,7 +182,43 @@
                 </section>
             </div>
             
+            <div class="event-dashboard__details">
+                <section class="create-section">
+                    <div class="icon">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Main event image</h1>
+                        <p>This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</p>
+        
+                        <div class="input-group event-dashboard__event-image">
+                            <input type="url" placeholder="https://example.png/(jpg)" id="event-image">
+                                <label for="event-title">Event image</label>
+                            </input>
+                            <img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg" alt="" srcset="" id="event-image-preview">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="create-section">
+                    <div class="icon">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Description</h1>
+                        <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
+        
+                        <div class="input-group">
+                            <label for="event-sammary" id="summary-lable">Summary</label>
+                            <textarea type="" id="event-sammary" ></textarea>
+                        </div>
+                        <div id="editor"></div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
 </body>
 </html>

@@ -41,6 +41,7 @@ header-component {
     display: flex;
     border-bottom: 1px solid #dbdae3;
     padding: 40px 0;
+    font-size: 13px;
 }
 
 .create-section .icon {
@@ -57,21 +58,40 @@ header-component {
     margin-bottom: 5px;
 }
 
+.create-section .content {
+    width: 100%;
+}
+
 .input-group {
     margin-bottom: 10px;
     padding: 20px 0;
+    position: relative;
 }
 
-.input-group input{
+.input-group input, .input-group textarea{
     width: 100%;
     height: 50px;
     border: 1px solid #dbdae3;
     padding-top: 15px;
     padding-left: 10px;
 }
+.input-group textarea {
+    padding-top: 30px;
+    height: 80px;
+    position: relative;
+}
+
+label#summary-lable {
+    z-index: 4;
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+}
 
 .input-group input:focus,
-.input-group .selections:focus {
+.input-group .selections:focus,
+.input-group textarea:focus {
     outline: #59595a;
 }
 
@@ -92,6 +112,11 @@ header-component {
     padding: 10px;
     color: #1d2636;
     margin-right: 20px;
+}
+
+.event-dashboard__event-image img {
+    width: 100px;
+    margin-top: 40px;
 }
 
 .radios {
@@ -272,6 +297,8 @@ li.event-dashboard__event-title:hover {
     margin-right: 10px;
 }
 
-.event-dashboard__basic-info {
+.event-dashboard__basic-info,
+.event-dashboard__details {
     display: none;
 }
+
