@@ -4,9 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <title>Event Organizer</title>
+    <link rel="icon" href="./assets/img/EventOrganizer.PNG">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
 </head>
 <body>
-    
+  <header class="topnav">
+    <a href="#" id="logo-font" class="navitem">
+      <img src="./assets/img/EventOrganizer.PNG" alt="logo" id="logo">
+      EventOrganizer
+    </a>
+    <a href="#" id="search">
+      <input type="text" id="searchBar" placeholder="Search For Event">
+    </a>
+    <div>
+      <a class="right active navitem" href="#createEvent">
+        <i class="fa fa-plus"></i>
+        Create Event
+      </a>
+      <a href="#likes" class="right navitem">
+        <i class="fa fa-heart"></i>
+        Likes
+      </a>
+      <a href="#tickets" class="right navitem">
+        <i class="fa fa-ticket"></i>
+        Tickets
+      </a>
+      <div class="show-hidden">
+        <a href="mailto:it.daiwt.bezabih@gmail.com" class="emailtop">
+          <i class="fa fa-user"></i> it.dawit.bezabih@gmail.com
+        </a>
+        <div class="hide">
+          <a href="#" class="hovered"><i class="fa fa-calendar"></i> Browse Events</a>
+          <a href="#" class="hovered"><i class="fa fa-cog"></i> Account Settings</a>
+          <a href="#" class="hovered"><i class="fa fa-sign-out"></i> Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <div>
+    <form class="form-controls add-event">
+      <input type="text" class="event-title form-controls" placeholder="Enter Event Title">
+      <input type="text" id="eventImage" class="event-image form-controls" placeholder="Link Of Event Image">
+      <textarea class="form-controls event-description" cols="30" rows="5"></textarea>
+      <button>Create</button>
+    </form>
+  </div>
+  <ul class="cards cards-home">
+
+    <!-- cards will be here -->
+
+  </ul>
+  <script src="./assets/js/jquery-3.5.1.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>
