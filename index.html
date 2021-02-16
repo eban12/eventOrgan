@@ -18,19 +18,21 @@
 
 <body>
   <header class="topnav">
-    <a href="./index.html" id="logo-font" class="navitem">
-      <img src="./assets/img/EventOrganizer.PNG" alt="logo" id="logo">
-      EventOrgan
-    </a>
-    <a href="#" id="search">
+    <div id="firstNavBar">
+      <a href="./index.html" id="logo-font" class="navitem">
+        <img src="./assets/img/EventOrganizer.PNG" alt="logo" id="logo">
+        EventOrgan
+      </a>
+    </div>
+    <div id="searchBarNavBar">
       <input type="text" id="searchBar" placeholder="Search For Event">
-    </a>
+    </div>
     <div>
-      <a class="right active navitem" href="#createEvent">
+      <a class="right navitem" href="#createEvent">
        
         <!-- Button trigger modal -->
         <i class="fa fa-plus" data-toggle="modal" data-target="#exampleModal"></i>
-        <p data-toggle="modal" data-target="#exampleModal">Create Event</p>
+        <p id="uniqueP" data-toggle="modal" data-target="#exampleModal">Create Event</p>
 
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -52,8 +54,9 @@
                 <p></p>
                 <div id="line"></div>
                 <br>
-                <button type="submit" class="m-1 btn btn-primary">Create Event</button>
-                <button type="button" class="btn btn-dark closeTag" data-dismiss="modal"><i class="fa fa-window-close"></i></button>
+                <button type="button" class="btn btn-dark bottomButton" data-dismiss="modal"><i class="fa fa-window-close"></i></button>
+                <button type="submit" class="btn btn-primary bottomButton">Create Event</button>
+                
               </form>
             </div>
             
