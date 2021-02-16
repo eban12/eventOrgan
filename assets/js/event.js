@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () =>{
         console.log('Databse ready.');
 
         DB = eventDB.result;
-        displayTask();
+        displayEvent();
     }
 
-    function displayTask() {
+    function displayEvent() {
         console.log(DB);
         var transaction = DB.transaction(['events']);
         var objectStore = transaction.objectStore('events');

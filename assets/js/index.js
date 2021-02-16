@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const b = document.createElement('b');
                 const link = document.createElement('a');
                 const img = document.createElement('img');
-
+                const date = document.createElement('p');
+                const change = document.createElement('a');
 
                 img.className = 'img-fluid';
                 img.setAttribute('src', cursor.value.imageSource);
@@ -52,14 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 b.style.padding = '0.3rem';
                 li.className = 'card';
                 li.setAttribute('event-task-id', cursor.value.id);
+                date.appendChild(document.createTextNode(cursor.value.date));
+                date.style.color = "#f00";
+                date.style.fontSize = "0.9rem";
+                date.style.fontWeight = 'bolder';
+                change.className = 'changeEvent';
+                change.innerHTML = `<i class="fa fa-remove"></i> <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit"></i> </a>`;
                 
                 link.href = `event.html?id=${cursor.value.id}`;
                 link.innerHTML = `<img src=${cursor.value.imageSource} class='img-fluid event-image'></img>`;
                 li.appendChild(link);
                 b.appendChild(document.createTextNode(cursor.value.eventTitle));
+                li.appendChild(date);
                 h4.appendChild(b);
                 li.appendChild(b);
                 li.appendChild(document.createTextNode(cursor.value.eventDescription));
+                li.appendChild(change);
                 li.style.padding = '0.2rem';
                 eventList.appendChild(li);
                 
