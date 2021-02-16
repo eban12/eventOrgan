@@ -73,10 +73,10 @@ body {
       transition: visibility 0s, opacity 1s linear;
   }
   #event{
-      background-image: url(http://www.influenceim.com/wp-content/uploads/2017/07/event-planningand-management-1024x683-750x350.jpg);
+      /* background-image: url(http://www.influenceim.com/wp-content/uploads/2017/07/event-planningand-management-1024x683-750x350.jpg); */
       background-repeat: no-repeat;
       background-size: cover;
-      filter: blur(15px);
+      filter: blur(5px);
       position: absolute;
       left:0;
       top: 5rem;
@@ -171,16 +171,33 @@ body {
     list-style-type: none;
     margin: 2rem;
   }
-  .add-event{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 15rem;
-    padding: 1rem;
-  }
   .add-event > textarea{
     margin: 0.3rem;
   }
 .event-image {
   width: 100%;
+}
+.modal {
+  width: 70%;
+  margin: 0 auto; 
+}
+.modal-dialog{
+  width: 50rem;
+}
+.event-description{
+  width: 100%;
+}
+.event-detail{
+  width: 100%;
+}
+#line{
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+#cardEvent{
+  height: 26rem;
+}
+.closeTag{
+  text-align: right;
+  float: right;
 }

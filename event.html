@@ -15,13 +15,13 @@
 </head>
 <body>
   <header class="topnav">
-    <a href="#" id="logo-font" class="navitem">
+    <a href="./index.html" id="logo-font" class="navitem">
       <img src="./assets/img/EventOrganizer.PNG" alt="logo" id="logo">
       EventOrgan
     </a>
-    <a href="#" id="search">
+    <!-- <a href="#" id="search">
       <input type="text" id="searchBar">
-    </a>
+    </a> -->
     <div>
       <a href="#likes" class="right navitem">
         <i class="fa fa-heart"></i>
@@ -36,7 +36,7 @@
           <i class="fa fa-user"></i> it.dawit.bezabih@gmail.com
         </a>
         <div class="hide">
-          <a href="#" class="hovered"><i class="fa fa-calendar"></i> Browse Events</a>
+          <a href="./index.html" class="hovered"><i class="fa fa-calendar"></i> Browse Events</a>
           <a href="#" class="hovered"><i class="fa fa-cog"></i> Account Settings</a>
           <a href="#" class="hovered"><i class="fa fa-sign-out"></i> Logout</a>
         </div>
@@ -50,13 +50,13 @@
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
             <div class="image-holder">
-                <img class="eventImage" src="http://www.influenceim.com/wp-content/uploads/2017/07/event-planningand-management-1024x683-750x350.jpg" alt="Img">
-                <div class="card">
+                <img class="eventImage" id="frontImage" src="http://www.influenceim.com/wp-content/uploads/2017/07/event-planningand-management-1024x683-750x350.jpg" alt="Img">
+                <div class="card" id="cardEvent">
                     <div class="card-body">
-                        <p class="card-text">Feb 11</p>
-                      <h5 class="card-title">Lorem title</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam non est, amet debitis excepturi obcaecati! Sit obcaecati quam accusamus unde dolore, quae porro illum quo. Omnis suscipit doloremque fugiat dolore.</p>
-                      <p class="card-text"><small class="text-muted">57$ - 78$</small></p>
+                      <p class="card-text" id="eventDate">Feb 11</p>
+                      <h3 class="card-title" id="title">Lorem title</h3>
+                      <p id="title"></p>
+                      <p class="card-text" id="description"></p>
                     </div>
                 </div>
                 
@@ -84,13 +84,9 @@
                     
                     <div>
                         <h2>About this event</h2>
+                        <p id="eventDetail">This is the Detail</p>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente nulla voluptates est quae laborum officia ex reprehenderit officiis dolores placeat quidem minima, facere soluta, ratione reiciendis ea dolor deleniti?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui iste hic ea veritatis voluptates sit quibusdam quis, id porro aliquid quaerat sapiente, autem et eveniet eius quo debitis doloribus nam!Lorem <br><br>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque et veniam numquam, vero minima harum reiciendis. Ipsum nemo qui enim, consequatur aut cumque dolorum, sed corporis consectetur ipsam atque voluptatum!Lorem
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus deleniti ut, perferendis doloribus sequi id inventore cum. Mollitia neque officiis enim, maiores autem voluptatum harum omnis sequi quod inventore odio?
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur ut cupiditate minima molestiae sed sapiente, omnis reprehenderit mollitia, quae iste asperiores, eaque facere. Perferendis similique ullam dicta harum odit. Porro? <br><br>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore architecto eaque hic. Error quo nostrum eum, praesentium omnis officiis sint porro adipisci impedit quisquam necessitatibus facere. In reiciendis cumque velit!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab magnam repellat id, et harum nemo deleniti doloribus vitae saepe quo velit fugiat tenetur odio veniam eligendi assumenda. Fuga, a assumenda! <br><br><br><br>
+                          <img src="" id="imageSource" alt="Event Image" style="display: none;">
                         </p>
                         <p>Tags</p>
                         <p>
@@ -112,15 +108,13 @@
                 </div>
                 <div class="col-lg-4">
                     <p>Date And Time</p>
-                    Thu, Feb 11, 2021, 10:00 PM +03 <br>
-
-                    Add to Calendar <br>
+                    <p id="dateAndTime"></p> <br>
 
                     Location <br>
-                    Online Event <br>
+                    <p id="eventLocation">Online Event</p> <br>
 
                     Refund Policy <br>
-                    No Refunds <br>
+                    <p>No Refund Policy In Our Event Organizer</p> <br>
                 </div>
             </div>
             

@@ -5,7 +5,9 @@ const eventTitle = document.querySelector('.event-title');
 const eventDescription = document.querySelector('.event-description');
 const eventList = document.querySelector('.cards-home');
 const eventImage = document.querySelector('#eventImage');
+const eventDetail = document.querySelector('.event-detail');
 const ShowImageSource = document.getElementById('showImageSrc');
+const eventLocation = document.querySelector('#eventLocation');
 
 filter.addEventListener('keyup', filterTasks);
 
@@ -47,21 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.setAttribute('src', cursor.value.imageSource);
                 // link.textContent = img;
                 b.textContent = (eventTitle.value);
+                b.style.padding = '0.3rem';
                 li.className = 'card';
                 li.setAttribute('event-task-id', cursor.value.id);
                 
-                link.href = `event.html?id=${cursor.value.eventTitle}`;
+                link.href = `event.html?id=${cursor.value.id}`;
                 link.innerHTML = `<img src=${cursor.value.imageSource} class='img-fluid event-image'></img>`;
                 li.appendChild(link);
                 b.appendChild(document.createTextNode(cursor.value.eventTitle));
                 h4.appendChild(b);
                 li.appendChild(b);
                 li.appendChild(document.createTextNode(cursor.value.eventDescription));
+                li.style.padding = '0.2rem';
                 eventList.appendChild(li);
                 
                 eventTitle.value = "";
                 eventDescription.value = "";
                 eventImage.value = "";
+                eventDetail.value = "";
+                eventLocation.value = "";
                 
                 cursor.continue();
             }
@@ -83,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Error Loading Database.");
         }
         let store = DB.createObjectStore("events", {
-            keypath: 'id',
+            keyPath: 'id',
             autoIncrement: true
         });
     
@@ -100,7 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
             eventTitle: eventTitle.value,
             eventDescription: eventDescription.value,
             date: new Date(),
-            imageSource: eventImage.value
+            imageSource: eventImage.value,
+            eventDetail: eventDetail.value,
+            eventLocation: eventLocation.value
         }
     
         let transaction = DB.transaction(['events'], 'readwrite');
