@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 change.className = 'changeEvent';
                 line.id = 'line';
 
-                change.innerHTML = `<i class="fa fa-remove btn deleteEvent" id="deleteEvent"></i> <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit btn"></i> </a>`;
+                // change.innerHTML = `<i class="fa fa-remove btn deleteEvent" id="deleteEvent"></i> <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit btn"></i> </a>`;
                 link.href = `event.html?id=${cursor.value.id}`;
                 link.innerHTML = `<img src=${cursor.value.imageSource} class='img-fluid event-image'></img>`;
                 li.appendChild(link);

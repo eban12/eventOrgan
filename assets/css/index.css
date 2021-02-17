@@ -64,9 +64,18 @@ body {
 
 #searchBar {
   padding: 0.5rem;
-  margin-top: 0.6rem;
+  margin-top: 0.9rem;
   margin-left: 3rem;
   width: 20rem;
+  font-Size: 0.8rem;
+  font-weight: bolder;
+  border: 0px;
+  background-color: #f0f0f0;
+}
+#searchBar:focus {
+  outline: none !important;
+  border: 2px solid red;
+  border-color: #00f;
 }
 
 .right {
