@@ -3,22 +3,37 @@ import "../../components/EventsList.js";
 import "../../components/Select-component.js";
 import "../../components/Ticket.js";
 
-ClassicEditor
-    .create( document.querySelector( '#editor' ) )
-    .catch( error => {
-        console.error( error );
-    } );
+(function () {
+    function init() {
+        // add click listner to all modal trigers 
+        document.querySelectorAll(".modal-triger").forEach((el) => {
+            el.addEventListener("click", () => {
+              const target = document.querySelector(
+                `#${el.getAttribute("data-target")}`
+              );
+              target.style.display = "flex";
+            });
+          });
+        
+          // add click listner to all modals
+          document.querySelectorAll(".modal").forEach((modal) => {
+            modal.addEventListener("click", (e) => {
+              if (!modal.querySelector(".modal__content").contains(e.target)) {
+                modal.style.display = "none";
+              }
+            });
+          });
 
-let ts = document.querySelector('.tickets-list');
-for (let i = 0; i < 3; i++) {
-    let a = document.createElement('ticket-component');
 
-    a.ticketVals = {
-        id: i,
-        name: 'General Admission',
-        sellEnd: 'Ends 1 hour before event end',
-        amount: 78,
-        price: 12.00,
+          document.querySelectorAll('.btn-radio').forEach(el => {
+            el.addEventListener('change', () => {
+              const radios = el.parentElement.parentElement;
+              const prev = radios.querySelector('.active-radio');
+              prev.classList.remove('active-radio');
+              el.parentElement.classList.add('active-radio');
+            })
+          })
     }
-    ts.appendChild(a);
-}
+
+    init();
+})();

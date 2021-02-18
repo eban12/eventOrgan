@@ -7,6 +7,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/main.js" type="module" defer></script>
+    <script src="assets/js/eventDashboard.js" type="text/javascript" defer></script>
     <title>Document</title>
 </head>
 <body class="dashboard">
@@ -225,16 +226,59 @@
                     <div class="content">
                         <h1 class="title">Tickets</h1>
                         <div class="event-dashboard__tickets-list">
-                            <button class="btn btn-primary align-right">Add Ticket</button>
-                            <div class="tickets-list">
-
-                            </div>
+                            <button class="btn btn-primary align-right modal-triger" data-target="add-ticket-modal">Add Ticket</button>
+                            <div class="tickets-list"></div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
     </main>
+
+
+    <div class="modal modal__container" id="add-ticket-modal">
+        <div class="modal__content">
+            <h2 class="modal__header">Add ticket</h2>
+            <div class="modal__body">
+                <form id="add-ticket-form">
+                    <div class="input-group">
+                        <input type="text" id="ticket-name" name="ticket-name">
+                            <label for="ticket-name">Ticket name</label>
+                        </input>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="number" id="ticket-quantity" name="ticket-quantity">
+                            <label for="ticket-quantity">Quantity</label>
+                        </input>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="number" id="ticket-price" name="ticket-price">
+                            <label for="ticket-price">Price</label>
+                        </input>
+                    </div>
+
+                    <p>Ticket sell ends</p>
+                    <div class="ticket__sell-end">
+                        <div class="input-group">
+                            <input type="number" id="ticket-sell-end" name="ticket-sell-end">
+                            </input>
+                        </div>
+                        <div class="input-group">
+                            <select id="ticket-sell-end-timeunit" class="selections" name="ticket-sell-end-timeunit">
+                                <option selected value="hours">Hours</option>
+                                <option value="days">Days</option>
+                                <option value="minutes">Minutes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p>Before event begins</p>
+                    <button class="btn btn-primary align-right">Add</button>
+                </form>
+           </div>
+        </div>
+    </div>
 
     <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
 </body>
