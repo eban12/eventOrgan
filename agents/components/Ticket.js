@@ -77,7 +77,7 @@ class Ticket extends HTMLElement {
 
     set ticketVals(ticketObj) {
         template.content.querySelector('#name').textContent = ticketObj.name;
-        template.content.querySelector('#sellEnd').textContent = ticketObj.sellEnd;
+        template.content.querySelector('#sellEnd').textContent = `Ends ${ticketObj.sellEnd} ${ticketObj.timeUnit} before event starts.`;
         template.content.querySelector('#amount').textContent = ticketObj.amount;
         template.content.querySelector('#price').textContent = ticketObj.price;
         template.content.querySelector('.card').setAttribute('data-ticket-id', ticketObj.id)
