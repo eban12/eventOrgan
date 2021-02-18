@@ -1,9 +1,9 @@
 import "../../components/Header.js";
 import "../../components/EventsList.js";
-import "../../components/Select-component.js";
 import "../../components/Ticket.js";
 
 (function () {
+
     function init() {
         // add click listner to all modal trigers 
         document.querySelectorAll(".modal-triger").forEach((el) => {
@@ -29,8 +29,26 @@ import "../../components/Ticket.js";
             el.addEventListener('change', () => {
               const radios = el.parentElement.parentElement;
               const prev = radios.querySelector('.active-radio');
+              const venue = document.querySelector('#venue');
+              const addressForm = document.querySelector('.address-form');
+              const endDate = document.querySelector('#end-date');
+              const singleEvent = document.querySelector('#single');
+
               prev.classList.remove('active-radio');
               el.parentElement.classList.add('active-radio');
+
+              if (el === venue) {
+                addressForm.style.display = 'flex';
+              } else if (addressForm.parentElement === radios.parentElement) {
+                addressForm.style.display = 'none';
+              }
+
+              if (el === singleEvent) {
+                endDate.disabled = true;
+              } else if (radios.parentElement.contains(endDate)) {
+                endDate.disabled = false;
+              }
+
             })
           })
     }

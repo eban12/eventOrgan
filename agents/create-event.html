@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,142 +8,148 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/main.js" type="module" defer></script>
+    <script src="assets/js/eventCreate.js" type="text/javascript" defer></script>
     <title>Document</title>
 </head>
+
 <body>
     <header-component></header-component>
     <main class="create-main">
-        <section class="create-section">
-            <div class="icon">
-                <i class="fa fa-info" aria-hidden="true"></i>
-            </div>
-            <div class="content">
-                <h1 class="title">Basic Info</h1>
-                <p>Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</p>
+        <form id="create-event-form">
+            <section class="create-section">
+                <div class="icon">
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                </div>
+                <div class="content">
+                    <h1 class="title">Basic Info</h1>
+                    <p>Name your event and tell event-goers why they should come. Add details that highlight what makes
+                        it unique.</p>
 
-                <div class="input-group">
-                    <input type="text" id="event-title">
+                    <div class="input-group">
+                        <input type="text" id="event-title" name="event-title">
                         <label for="event-title">Event title</label>
-                    </input>
-                </div>
+                        </input>
+                    </div>
 
-                <div class="input-group">
-                    <input type="text" id="event-organizer">
+                    <div class="input-group">
+                        <input type="text" id="event-organizer" name="event-organizer">
                         <label for="event-organizer">Organizer description</label>
-                    </input>
-                </div>
-
-                <div class="input-group">
-                    <select id="" class="selections">
-                        <option selected>Type</option>
-                    </select>
-                    <select id="" class="selections">
-                        <option selected>Category</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-
-        <section class="create-section">
-            <div class="icon">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-            </div>
-            <div class="content">
-                <h1 class="title">Location</h1>
-                <p>Help people in the area discover your event and let attendees know where to show up.</p>
-                
-                <div class="radios">
-                    <div class="radio-group active-radio">
-                        <input type="radio" id="venue" name="venueType" class="btn-radio" checked>
-                        <label for="venue">Venue</label>
+                        </input>
                     </div>
 
-                    <div class="radio-group">
-                        <input type="radio" id="online" name="venueType" class="btn-radio">
-                        <label for="online">Online</label>
-                    </div>
-
-                    <div class="radio-group">
-                        <input type="radio" id="announce" name="venueType" class="btn-radio">
-                        <label for="announce">To be announced</label>
-                    </div>
-                </div>
-
-                <div class="address-form">
-                    <h2 class="sub-title">Address</h2>
                     <div class="input-group">
-                        <input type="text" id="address-street">
+                        <select id="event-type" name="event-type" class="selections">
+                            <option selected>Type</option>
+                        </select>
+                        <select id="" class="selections">
+                            <option selected>Category</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <section class="create-section">
+                <div class="icon">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </div>
+                <div class="content">
+                    <h1 class="title">Location</h1>
+                    <p>Help people in the area discover your event and let attendees know where to show up.</p>
+
+                    <div class="radios">
+                        <div class="radio-group active-radio">
+                            <input type="radio" id="venue" name="event-location" class="btn-radio" checked>
+                            <label for="venue">Venue</label>
+                        </div>
+
+                        <div class="radio-group">
+                            <input type="radio" id="online" name="event-location" class="btn-radio">
+                            <label for="online">Online</label>
+                        </div>
+
+                        <div class="radio-group">
+                            <input type="radio" id="announce" name="event-location" class="btn-radio">
+                            <label for="announce">To be announced</label>
+                        </div>
+                    </div>
+
+                    <div class="address-form">
+                        <h2 class="sub-title">Address</h2>
+                        <div class="input-group">
+                            <input type="text" id="address-street" name="address-street">
                             <label for="address-street">Street</label>
-                        </input>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="address-city">
+                            </input>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="address-city" name="address-city">
                             <label for="address-city">City</label>
-                        </input>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="address-state">
+                            </input>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="address-state" name="address-state">
                             <label for="address-state">State</label>
-                        </input>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="address-country">
+                            </input>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="address-country" name="address-country">
                             <label for="address-country">Country</label>
-                        </input>
+                            </input>
+                        </div>
                     </div>
+
                 </div>
+            </section>
 
-            </div>
-        </section>
-
-        <section class="create-section">
-            <div class="icon">
-                <i class="fa fa-calendar" aria-hidden="true"></i>
-            </div>
-            <div class="content">
-                <h1 class="title">Date and time</h1>
-                <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
-                
-                <div class="radios">
-                    <div class="radio-group active-radio">
-                        <input type="radio" id="single" name="eventType" class="btn-radio" checked>
-                        <label for="single">Single event</label>
-                    </div>
-
-                    <div class="radio-group">
-                        <input type="radio" id="multiple" name="eventType" class="btn-radio">
-                        <label for="multiple">Multiple events</label>
-                    </div>
+            <section class="create-section">
+                <div class="icon">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
                 </div>
+                <div class="content">
+                    <h1 class="title">Date and time</h1>
+                    <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
 
-                <div class="address-form">
-                    <div class="input-group">
-                        <input type="date" id="start-date">
+                    <div class="radios">
+                        <div class="radio-group active-radio">
+                            <input type="radio" id="single" name="event-frequency" class="btn-radio" checked>
+                            <label for="single">Single event</label>
+                        </div>
+
+                        <div class="radio-group">
+                            <input type="radio" id="multiple" name="event-frequency" class="btn-radio">
+                            <label for="multiple">Multiple events</label>
+                        </div>
+                    </div>
+
+                    <div class="address-form">
+                        <div class="input-group">
+                            <input type="date" id="start-date">
                             <label for="start-date">Start date</label>
-                        </input>
-                    </div>
-                    <div class="input-group">
-                        <input type="time" id="start-time">
+                            </input>
+                        </div>
+                        <div class="input-group">
+                            <input type="time" id="start-time">
                             <label for="start-time">Start time</label>
-                        </input>
-                    </div>
-                    <div class="input-group">
-                        <input type="date" id="end-date">
+                            </input>
+                        </div>
+                        <div class="input-group">
+                            <input type="date" id="end-date" disabled>
                             <label for="end-date">End date</label>
-                        </input>
-                    </div>
-                    <div class="input-group">
-                        <input type="time" id="end-time">
+                            </input>
+                        </div>
+                        <div class="input-group">
+                            <input type="time" id="end-time">
                             <label for="end-time">End time</label>
-                        </input>
+                            </input>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
     </main>
     <div class="save-discard">
-          <button class="btn btn-outline">Discard</button>  
-          <button class="btn btn-primary">Save and continue</button>  
+        <button class="btn btn-outline" type="reset">Discard</button>
+        <button class="btn btn-primary" type="submit">Save and continue</button>
     </div>
+    </form>
 </body>
+
 </html>

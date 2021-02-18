@@ -25,6 +25,11 @@ template.innerHTML = `
             cursor: pointer;
         }
 
+        button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
         .title-section button:hover {
             background: #db304a;
         }
@@ -62,27 +67,8 @@ template.innerHTML = `
             outline: none;
         }
 
-        .option-bar {
+        select-component {
             width: 30%;
-            border: solid 1px #d0d0d0;
-            border-radius: 3px;
-            margin-left: 15px;
-            padding: 5px 15px;
-            color: gray;
-        }
-
-        .option-bar h3 {
-            font-size: 14px;
-            font-weight: 400;
-            margin: 0;
-            padding: 0;
-        }
-
-        .option-input {
-            width: 100%;
-            color: gray;
-            padding: 3px 0;
-            border: none;
         }
 
         .table-header {
@@ -109,21 +95,13 @@ template.innerHTML = `
     <div>
         <section class="title-section">
             <h1>Events</h1>
-            <button>Create Event</button>
+            <button><a href="create-event.html">Create Event</a></button>
         </section>
         
         <section class="filter-section">
             <div class="search-bar">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input type="text" placeholder="Search events" id="search-input"/>
-            </div>
-            <div class="option-bar">
-                <h3>Filter by</h3>
-                <select class="option-input">
-                    <option>All</option>
-                    <option>Published</option>
-                    <option>Draft</option>
-                </select>
             </div>
         </section>
 
@@ -166,6 +144,10 @@ class Events extends HTMLElement {
         }
 
         tableBody.appendChild(event2);
+
+        const opts = document.createElement('select-component');
+        opts.options = [{value: 1, name: "All"}, {value: 2, name: "Published"}, {value: 3, name: "Draft"}]
+        template.content.querySelector('.filter-section').appendChild(opts);
     }
 
     connectedCallback() {

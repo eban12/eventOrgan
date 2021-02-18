@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    color: #1d2636;
 }
 
 .main {
@@ -71,9 +72,10 @@ header-component {
 .input-group input, .input-group textarea{
     width: 100%;
     height: 50px;
-    border: 1px solid #dbdae3;
+    border: 1px solid #cac9d1;
     padding-top: 15px;
     padding-left: 10px;
+    border-radius: 3px;
 }
 .input-group textarea {
     padding-top: 30px;
@@ -95,8 +97,13 @@ label#summary-lable {
     outline: #59595a;
 }
 
+.input-group input:disabled {
+    cursor: not-allowed;
+    background: #eeeeee;
+}
+
 .input-group label {
-    color: #929296;
+    color: #606061;
     font-size: 12px;
     display: block;
     z-index: 8;
@@ -147,6 +154,7 @@ label#summary-lable {
     border: 1px solid #dbdae3;
     border-radius: 3px;
     padding: 10px 15px;
+    cursor: pointer;
 }
 
 .active-radio label {
@@ -297,8 +305,83 @@ li.event-dashboard__event-title:hover {
     margin-right: 10px;
 }
 
-.event-dashboard__basic-info,
+.align-right {
+    display: block;
+    margin-left: auto;
+}
+
+.event-dashboard__tickets-list {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.tickets-list {
+    margin-top: 40px;
+}
+
+
+/* .event-dashboard__basic-info,
 .event-dashboard__details {
+    display: none;
+} */
+
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
     display: none;
 }
 
+.modal__content {
+    background: #fff;
+    width: 50%;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    color: #1d2636;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+}
+
+.modal__header {
+    border-bottom: 1px solid #1d26362a;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.modal__body {
+    padding-left: 15px;
+}
+
+.modal__content p {
+    font-size: 13px;
+}
+
+.ticket__sell-end {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket__sell-end .input-group:nth-child(1) {
+    width: 70%;
+}
+
+.ticket__sell-end .input-group:nth-child(2) {
+    width: 25%;
+}
+
+.ticket__sell-end .input-group:nth-child(1) input {
+    padding-top: 0;
+}
+
+.ticket__sell-end .selections {
+    width: 100%;
+}
