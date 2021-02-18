@@ -49,7 +49,18 @@ import "../../components/Ticket.js";
                 endDate.disabled = false;
               }
 
+            });
+          });
+
+          document.querySelectorAll('.dashboard-menu__triger').forEach(el => {
+
+            el.addEventListener('click', () => {
+              const prev = document.querySelector('.event-dashboard__active');
+              const cur = document.querySelector(el.getAttribute('data-target'));
+              prev.classList.remove('event-dashboard__active');
+              cur.classList.add('event-dashboard__active');
             })
+
           })
     }
 

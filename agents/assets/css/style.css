@@ -320,10 +320,13 @@ li.event-dashboard__event-title:hover {
 }
 
 
-/* .event-dashboard__basic-info,
-.event-dashboard__details {
+.dashboard-menu {
     display: none;
-} */
+}
+
+.event-dashboard__active {
+    display: block;
+}
 
 .modal {
     position: absolute;

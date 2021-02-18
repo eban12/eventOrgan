@@ -15,7 +15,7 @@
     <main class="main event-dashboard">
         <aside class="event-dashboard__sidebar">
             <ul>
-                <li>Manage my events</li>
+                <li><a href="index.html">Manage my events</a></li>
                 <li class="event-dashboard__event-title">
                     Test
                     <div class="event-dashboard__event-type">
@@ -23,20 +23,20 @@
                         Recurring event
                     </div>
                 </li>
-                <li>
+                <li class="dashboard-menu__triger" data-target="#event-dashboard__basic-info">
                     <div class="event-dashboard__steps">
                         1
                     </div>
                     Basic info
                 </li>
                 
-                <li>
+                <li class="dashboard-menu__triger" data-target="#event-dashboard__details">
                     <div class="event-dashboard__steps">
                         2
                     </div>
                     Details
                 </li>
-                <li>
+                <li class="dashboard-menu__triger" data-target="#event-dashboard__tickets">
                     <div class="event-dashboard__steps">
                         3
                     </div>
@@ -54,8 +54,8 @@
             </ul>
         </aside>
         <div class="event-dashboard__content">
-            <div class="event-dashboard__basic-info">
-                <section class="create-section">
+            <div id="event-dashboard__basic-info" class="event-dashboard__active dashboard-menu">
+                <section class="create-section"> 
                     <div class="icon">
                         <i class="fa fa-info" aria-hidden="true"></i>
                     </div>
@@ -183,7 +183,7 @@
                 </section>
             </div>
             
-            <div class="event-dashboard__details">
+            <div id="event-dashboard__details" class="dashboard-menu">
                 <section class="create-section">
                     <div class="icon">
                         <i class="fa fa-picture-o" aria-hidden="true"></i>
@@ -218,7 +218,7 @@
                 </section>
             </div>
 
-            <div class="event-dashboard__tickets">
+            <div id="event-dashboard__tickets" class="dashboard-menu">
                 <section class="create-section">
                     <div class="icon">
                         <i class="fa fa-ticket" aria-hidden="true"></i>
