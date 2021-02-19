@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const link = document.createElement('a');
                 const img = document.createElement('img');
                 const date = document.createElement('p');
-                const change = document.createElement('a');
+                // const change = document.createElement('a');
                 const line = document.createElement('div');
 
                 img.className = 'img-fluid';
@@ -60,10 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 date.style.fontSize = "0.9rem";
                 date.style.fontWeight = 'bolder';
                 date.style.paddingTop = '0.4rem';
-                change.className = 'changeEvent';
+                // change.className = 'changeEvent';
                 line.id = 'line';
 
-                // change.innerHTML = `<i class="fa fa-remove btn deleteEvent" id="deleteEvent"></i> <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit btn"></i> </a>`;
+                //change.innerHTML = `<i class="fa fa-remove btn deleteEvent" id="deleteEvent"></i> <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit btn"></i> </a>`;
                 link.href = `event.html?id=${cursor.value.id}`;
                 link.innerHTML = `<img src=${cursor.value.imageSource} class='img-fluid event-image'></img>`;
                 li.appendChild(link);
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 li.appendChild(b);
                 li.appendChild(document.createTextNode(cursor.value.eventDescription));
                 li.appendChild(line);
-                li.appendChild(change);
+                // li.appendChild(change);
                 li.style.padding = '0.2rem';
                 eventList.appendChild(li);
 
@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Database is ready and fields are created.');
         }
     }
+
+    
     form.addEventListener('submit', addNewEvent);
 
 
