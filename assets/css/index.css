@@ -503,12 +503,6 @@ h6 {
 }
 
 .sidenavbar nav div div ul {
-    /* margin-top: 2rem; */
-    /* margin-left: 2rem; */
-    /* display: flexbox;
-    flex-direction: column; */
-    /* padding: 6px 8px 6px 16px; */
-    /* margin-top: 10px; */
     width: fit-content;
     font-size: 15px;
     display: block;
@@ -517,20 +511,15 @@ h6 {
 .sidenavbar nav div div ul li a {
     color: rgb(14, 13, 13);
     text-decoration: none;
-    /* margin-top: 20px; */
-    /* display: block; */
 }
 
-.sidenavbar nav div #tgleed {
-    /* margin-top: 200px;
-    padding-left: -2px; */
-}
+.sidenavbar nav div #tgleed {}
 
 .sidenavbar nav div div ul a:hover {
     color: #22b122;
 }
 
-.main {
+*/ .main {
     top: 0;
     margin-left: 20rem;
     font-size: 28px;

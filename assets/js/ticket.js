@@ -66,6 +66,65 @@ h6 {
     height: 2rem;
 }
 
+
+@media (max-width: 320px) {
+    #ticketcontainer {
+        width: 100%;
+        height: 10rem;
+       
+        background: white;
+    }
+    #ticket-img {
+        width: 9rem;
+        height: 10rem;
+    }
+    h6 {
+        margin-top: 0px;
+        color: #ff4d28;
+        font-size:10px
+    }
+    
+    #addtcurt {
+        background: #ff4d28;
+        color: white;
+       
+    }
+    
+    #icon {
+        background: rgb(177, 175, 175);
+        
+    }
+    
+    #fd {
+        color: #ff4d28;
+       
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </style>
   <div id="bodycontainer">
         <h5>Ticket</h5>
