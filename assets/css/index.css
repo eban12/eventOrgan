@@ -494,33 +494,40 @@ h6 {
 */
 
 .sidenavbar {
-    /* height: 100%; */
-    width: 18rem;
-    height: 100%;
     position: relative;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: rgb(248, 248, 248);
-    overflow-x: hidden;
     padding-top: 20px;
+    width: 20%;
 }
 
-.sidenavbar nav div #tgleed ul li a {
-    margin-top: 2rem;
+.sidenavbar nav div div ul {
+    /* margin-top: 2rem; */
     /* margin-left: 2rem; */
     /* display: flexbox;
     flex-direction: column; */
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
+    /* padding: 6px 8px 6px 16px; */
+    /* margin-top: 10px; */
+    width: fit-content;
     font-size: 15px;
-    color: #22b122;
     display: block;
 }
 
-.sidenavbar nav #tgleed ul li a:hover {
-    color: red;
-    display: block;
+.sidenavbar nav div div ul li a {
+    color: rgb(14, 13, 13);
+    text-decoration: none;
+    /* margin-top: 20px; */
+    /* display: block; */
+}
+
+.sidenavbar nav div #tgleed {
+    /* margin-top: 200px;
+    padding-left: -2px; */
+}
+
+.sidenavbar nav div div ul a:hover {
+    color: #22b122;
 }
 
 .main {
@@ -566,10 +573,12 @@ h3 {
 @media (max-width: 320px) {
     .contacts {
         margin-left: 1rem;
+        font-size: 12px;
     }
     .sidenavbar {
         width: 100%;
         /* height: 100%; */
+        height: fit-content;
         position: relative;
         z-index: 1;
         top: 0;
@@ -589,10 +598,11 @@ h3 {
     .contacts {
         margin-left: 1rem;
         width: 10rem;
+        font-size: 12px;
     }
     .sidenavbar {
         width: 100%;
-        /* height: 100%; */
+        height: 100%;
         position: relative;
         z-index: 1;
         top: 0;
