@@ -124,3 +124,126 @@ main {
     border-top: 1px solid rgba(180, 179, 179, 0.637);
     border-bottom: 1px solid rgba(180, 179, 179, 0.637);
 }
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background: #0e8548;
+}
+
+.detail__ticketbar .btn {
+    width: 28%;
+    display: block;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.datail__body-side-2 {
+    padding: 40px 15px;
+}
+
+.datail__body-side-2 p {
+    margin-bottom: 10px;
+}
+
+.datail__body-side-2 section {
+    margin-bottom: 50px;
+}
+
+.detail__location {
+    font-weight: 500;
+}
+
+.detail__body-side-1 {
+    padding: 30px;
+}
+
+.detail__footer {
+    border-top: 1px solid rgba(180, 179, 179, 0.637);
+    padding: 30px;
+    margin: 0 50px;
+    text-align: center;
+}
+
+.detail__footer p {
+    line-height: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+event-card {
+    width: 23%;
+    min-height: 100%;
+}
+
+.interests__side1 {
+    width: 30%;
+    height: 100vh;
+    background: #fff;
+    padding: 40px;
+}
+
+.interests__side1 h1 {
+    font-size: 48px;
+    margin-top: 30px;
+}
+
+.interests__side1 p {
+    line-height: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.interests__side-2 {
+    flex: 1;
+    min-height: 100%;
+}
+
+.intersets__card {
+    background: #fff;
+    width: 80%;
+    padding: 40px 20px;
+    margin: 50px auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.input__group input[type=checkbox] {
+    height: 0;
+    width: 0;
+}
+
+.input__group {
+    display: inline-block;
+}
+
+.btn__checkbox {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #eee;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+}
+
+.interest__selected {
+    background: #ff4d28;
+    color: #fff;
+}
