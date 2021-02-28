@@ -561,13 +561,37 @@ h3 {
 /*  */
 
 @media (max-width: 320px) {
+    .topnav {
+        overflow: hidden;
+        background-color: #fff;
+        border-bottom: 2.4px solid #ff4d28;
+    }
+    .topnav a {
+        float: center;
+        color: #000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    /* .topnav div {
+        float: right;
+        display: block;
+    } */
+    .navitem:hover {
+        background-color: #f0f0f0;
+        color: black;
+    }
+    .topnav a.active {
+        color: blue;
+    }
     .contacts {
         margin-left: 1rem;
         font-size: 12px;
+        display: block;
     }
     .sidenavbar {
         width: 100%;
-        /* height: 100%; */
         height: fit-content;
         position: relative;
         z-index: 1;
