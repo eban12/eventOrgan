@@ -477,3 +477,35 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+h1 {
+    color: rgb(1, 10, 32);
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#forjumbotron img {
+    width: 20px;
+    background: rgb(190, 190, 190);
+}
+
+.jumbotron {
+    background: none;
+}
+
+.card-body {
+    font-size: 30px;
+} */s

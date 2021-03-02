@@ -248,7 +248,27 @@ event-card {
     color: #fff;
 }
 
-@media (max-width: 320px) {
+section p {
+    font-size: 12px;
+}
+
+@media (max-width: 325px) {
+    .detail__side-2 {
+        width: 400px;
+    }
+    .detail__event-info {
+        margin-top: 10px;
+        margin-left: -18px;
+        width: fit-content;
+    }
+    .detail__side-1 img {
+        width: 20px;
+        height: 20px;
+        background: green;
+    }
+}
+
+@media (max-width: 375px) {
     h1 {
         font-size: 0px;
     }
@@ -278,5 +298,42 @@ event-card {
     .input__group {
         display: block;
         width: 100%;
+    }
+    .detail__side-1 img {
+        width: 230px;
+        height: 120px;
+    }
+    .detail__event-date {
+        width: 50px;
+        text-align: center;
+        margin-top: 1px;
+        font-weight: 100px;
+        font-size: 15px;
+        margin-left: -1rem;
+    }
+    .detail__event-date .day {
+        font-size: 15px;
+    }
+    .detail__event-info {
+        margin-top: 10px;
+        margin-left: -17px;
+        width: fit-content;
+    }
+    .detail__event-title {
+        font-size: 18px;
+        font-weight: 100;
+    }
+    /*
+    .detail__side-2 {
+        width: fit-content;
+    } */
+}
+
+@media (max-width: 425px) {
+    .detail__side-2 {}
+    .detail__event-info {
+        margin-top: 10px;
+        margin-left: -18px;
+        width: fit-content;
     }
 }

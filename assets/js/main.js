@@ -36,7 +36,7 @@ import './Event-Card.js';
 
 document.querySelectorAll('.intersets__card .btn__checkbox').forEach(el => {
     el.addEventListener('click', (e) => {
-        console.log(e.target.parentElement.firstElementChild.checked);
+        window.alert(e.target.parentElement.firstElementChild.checked);
         el.classList.toggle('interest__selected')
     })
 });

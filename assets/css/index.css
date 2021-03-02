@@ -558,7 +558,7 @@ h3 {
 }
 
 
-/*  */
+/* For Card Detail page  */
 
 @media (max-width: 320px) {
     .topnav {
@@ -619,6 +619,9 @@ h3 {
     .sidenavbar #this a:hover {
         background: rgb(75, 82, 75);
         color: white;
+    }
+    #detail_card {
+        padding-right: 5rem;
     }
 }
 
