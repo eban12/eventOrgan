@@ -257,8 +257,8 @@ event-card {
     }
     .interests__side1 {
         width: 0%;
-        height: 0vh;
-        background: rgb(7, 7, 7);
+        height: 100vh;
+        background: #000;
         padding: 40px;
     }
     .interests__side1 p {
@@ -269,5 +269,14 @@ event-card {
     .interests__side1 h1 {
         font-size: 5px;
         margin-top: 20px;
+    }
+    .interests__side-2 {
+        flex: 1;
+        min-height: 100%;
+        width: 100%;
+    }
+    .input__group {
+        display: block;
+        width: 100%;
     }
 }
