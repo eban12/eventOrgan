@@ -67,12 +67,11 @@ h6 {
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
     #ticketcontainer {
         width: 100%;
-        height: 10rem;
+        height: 100px;
        
-        background: white;
     }
     #ticket-img {
         width: 9rem;
@@ -81,11 +80,10 @@ h6 {
     h6 {
         margin-top: 0px;
         color: #ff4d28;
-        font-size:10px
+        font-size:7px
     }
     
     #addtcurt {
-        background: green;
         color: white;
        
     }
@@ -99,10 +97,10 @@ h6 {
         color: #ff4d28;
        
     }
+    #bodycontainer{
+        hight:100px
+    }
     
-    
-    
-
 }
 
 
@@ -139,7 +137,7 @@ h6 {
 
                     <!-- <button id="addtcurt"><i class="fa fa-cart-arrow-down"></i> Add to Curt</button> -->
                     <div class="row">
-                        <div class="col-md-4 mb-2">Ticket type
+                        <div class="col-md-4 mb-2">Type 
                             <div><i class="fa fa-star" id="fd"></i> VIP</div>
                         </div>
                         <div class="col-md-4 mb-2">Price

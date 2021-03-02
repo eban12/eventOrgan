@@ -79,6 +79,7 @@ body {
 }
 
 .hide {
+    z-index: 9999999;
     display: none;
 }
 
@@ -114,6 +115,10 @@ body {
     background-color: #f0f0f0;
 }
 
+.show-hidden {
+    z-index: 9999;
+}
+
 .show-hidden:hover .hide {
     position: absolute;
     display: flex;
@@ -123,7 +128,7 @@ body {
     flex-direction: column;
     top: 3.4rem;
     right: 0rem;
-    z-index: 2;
+    z-index: 9999;
 }
 
 .price-bottom {
