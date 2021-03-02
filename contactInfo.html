@@ -67,7 +67,7 @@
                 </div>
             </a>
 
-            <a href="#likes" class="right navitem">
+            <a href="like.html" class="right navitem">
                 <i class="fa fa-heart"></i> Likes
             </a>
             <a href="ticket.html" class="right navitem">
@@ -81,6 +81,8 @@
                     <a href="./index.html" class="hovered"><i class="fa fa-calendar"></i> Browse Events</a>
                     <a href="contactInfo.html" class="hovered"><i class="fa fa-cog"></i> Account Settings</a>
                     <a href="signup.html" class="hovered"><i class="fa fa-sign-out"></i> Logout</a>
+                    <a href="favorite.htm" class="hovered"><i class="fa fa-heart "></i> Favorite</a>
+
                 </div>
 
             </div>
@@ -97,7 +99,7 @@
         <div class="col-md-4 sidenavbar ">
 
             <nav class="navbar navbar-expand-md " id="this">
-                <h3 class="navbar-brand">Account Info</h3>
+                <h3 class="navbar-brand">SETTING Info</h3>
 
                 <button class="navbar-toggler" data-toggle="collapse" type="button" data-bs-toggle="collapse" data-target="#tgleed" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon  badge-secondary"></span></button>
 
@@ -114,11 +116,7 @@
 
                     </ul>
 
-
-
             </nav>
-
-
 
             </div>
 
@@ -129,68 +127,67 @@
                     <div class="mb-3">
                         <div class="row mt-5">
                             <div class="col-md-6 ">
-                                <label for="exampleInputEmail1" class="form-label">First Name</label>
+                                <label for="exampleInputFirstname" class="form-label">First Name</label>
                                 <input type="text" class="form-control" id="username">
                             </div>
-                            <div class="col-md-6"><label for="exampleInputEmail1" class="form-label">Last Name</label>
+                            <div class="col-md-6"><label for="exampleInputLastname" class="form-label">Last Name</label>
                                 <input type="text" class="form-control" id="userlastname"></div>
-
                         </div>
                         <div class="row mt-5">
                             <div class="col-md-6 ">
-                                <label for="exampleInputEmail1" class="form-label">Suffix</label>
+                                <label for="exampleInputSuffix" class="form-label">Suffix</label>
                                 <input type="text" class="form-control" id="usersuffix">
                             </div>
 
                         </div>
                         <div class="row mt-5">
                             <div class="col-md-6 ">
-                                <label for="exampleInputEmail1" class="form-label">Home Phone </label>
+                                <label for="exampleInputHphone" class="form-label">Home Phone </label>
                                 <input type="number" class="form-control" id="userHphone">
                             </div>
-                            <div class="col-md-6"><label for="exampleInputEmail1" class="form-label">Cell Phone</label>
+                            <div class="col-md-6"><label for="exampleInputCphone" class="form-label">Cell Phone</label>
                                 <input type="text" class="form-control" id="userCphone"></div>
 
                         </div>
                         <div class="row mt-5">
                             <div class="col-md-6 ">
-                                <label for="exampleInputEmail1" class="form-label">Job Title </label>
-                                <input type="text" class="form-control" id="username">
+                                <label for="exampleInputJtitle" class="form-label">Job Title </label>
+                                <input type="text" class="form-control" id="Jobtitle">
                             </div>
-                            <div class="col-md-6"><label for="exampleInputEmail1" class="form-label">Company </label>
-                                <input type="text" class="form-control" id="userlastname"></div>
+                            <div class="col-md-6"><label for="exampleInputCompny" class="form-label">Company </label>
+                                <input type="text" class="form-control" id="company"></div>
 
                         </div>
                         <h2 class="mt-4">Home Address</h2>
                         <hr>
                         <div class="row">
-                            <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Adress </label>
-                                <input type="text" class="form-control" id="userlastname"></div>
+                            <div class="col-md-12"><label for="exampleInputAddres1" class="form-label">Adress </label>
+                                <input type="text" class="form-control" id="Adress1"></div>
 
                         </div>
                         <div class="row">
-                            <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Adress2 </label>
+                            <div class="col-md-12"><label for="exampleInputAdress2" class="form-label">Adress2 </label>
                                 <input type="text" class="form-control" id="userAdress2"></div>
 
                         </div>
                         <div class="row">
-                            <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">City </label>
+                            <div class="col-md-12"><label for="exampleInputCity" class="form-label">City </label>
                                 <input type="text" class="form-control" id="usercity"></div>
 
                         </div>
                         <div class="row">
-                            <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Country </label>
-                                <input type="text" class="form-control" id="usercity"></div>
+                            <div class="col-md-12"><label for="exampleInputCountry" class="form-label">Country </label>
+                                <input type="text" class="form-control" id="country"></div>
 
                         </div>
 
                         <div class="row mt-5">
                             <div class="col-md-6 ">
                                 <label for="exampleInputEmail1" class="form-label">Zip Code </label>
-                                <input type="text" class="form-control" id="userHphone">
+                                <input type="text" class="form-control" id="Zcode">
                             </div>
-                            <div class="col-md-6"><label for="exampleInputEmail1" class="form-label">State</label>
-                                <input type="text" class="form-control" id="userCphone"></div>
+                            <div class="col-md-6"><label for="exampleInputState" class="form-label">State</label>
+                                <input type="text" class="form-control" id="state"></div>
 
                         </div>
 
@@ -201,77 +198,71 @@
                     <h2 class="mt-4">Shipping Address</h2>
                     <hr>
                     <div class="row">
-                        <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Adress </label>
-                            <input type="text" class="form-control" id="userlastname"></div>
+                        <div class="col-md-12"><label for="InputAdress" class="form-label">Adress </label>
+                            <input type="text" class="form-control" id="Adres_ship"></div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Adress2 </label>
-                            <input type="text" class="form-control" id="userAdress2"></div>
+                            <input type="text" class="form-control" id="userAdress2_ship"></div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">City </label>
-                            <input type="text" class="form-control" id="usercity"></div>
+                            <input type="text" class="form-control" id="ship_city"></div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Country </label>
-                            <input type="text" class="form-control" id="usercity"></div>
+                            <input type="text" class="form-control" id="ship_country"></div>
 
                     </div>
 
                     <div class="row mt-5">
                         <div class="col-md-6 ">
                             <label for="exampleInputEmail1" class="form-label">Zip Code </label>
-                            <input type="number" class="form-control" id="userHphone">
+                            <input type="number" class="form-control" id="ship_Zcode">
                         </div>
                         <div class="col-md-6"><label for="exampleInputEmail1" class="form-label">State</label>
-                            <input type="text" class="form-control" id="userCphone"></div>
-
+                            <input type="text" class="form-control" id="ship_state"></div>
                     </div>
                     <h2 class="mt-4">Work Address</h2>
                     <hr>
                     <div class="row">
                         <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Adress </label>
-                            <input type="text" class="form-control" id="userlastname"></div>
+                            <input type="text" class="form-control" id="work_adress"></div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Adress 2 </label>
-                            <input type="text" class="form-control" id="usercity"></div>
+                            <input type="text" class="form-control" id="work_adress2"></div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">City </label>
-                            <input type="text" class="form-control" id="usercity"></div>
+                            <input type="text" class="form-control" id="work_city"></div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-12"><label for="exampleInputEmail1" class="form-label">Country </label>
-                            <input type="text" class="form-control" id="usercity"></div>
+                            <input type="text" class="form-control" id="work_country"></div>
 
                     </div>
 
                     <div class="row mt-5 mb-3">
                         <div class="col-md-6 mb-5 ">
                             <label for="exampleInputEmail1" class="form-label">Zip Code </label>
-                            <input type="text" class="form-control" id="userHphone">
+                            <input type="text" class="form-control" id="work_Zcode">
                         </div>
                         <div class="col-md-6"><label for="exampleInputEmail1" class="form-label">State</label>
-                            <input type="text" class="form-control" id="userCphone"></div>
+                            <input type="text" class="form-control" id="work_state"></div>
 
                     </div>
                     <button type="submit" class=" mb-5" id="psbtn">Submit</button>
 
-                    <!-- </div> -->
-                    <!-- </div> -->
-
                 </form>
             </div>
         </div>
-
-
 
     </div>
 

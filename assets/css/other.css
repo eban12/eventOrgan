@@ -337,3 +337,22 @@ section p {
         width: fit-content;
     }
 }
+
+@media(max-width: 768px) {
+    #foot {
+        color: white;
+        margin-left: -18rem;
+        text-align: center;
+        margin-top: 0rem;
+    }
+    .footer {
+        background: #2b105e;
+        color: rgb(231, 229, 225);
+        padding-left: 3%;
+        padding-left: 80%;
+        margin-top: 18%;
+        text-align: left;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+    }
+}
