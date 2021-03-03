@@ -9,7 +9,10 @@ const eventDetail = document.querySelector('.event-detail');
 const ShowImageSource = document.getElementById('showImageSrc');
 const eventLocation = document.querySelector('#eventLocation');
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 filter.addEventListener('keyup', filterTasks);
 
 function filterTasks() {
@@ -37,7 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
             eventList.removeChild(eventList.firstChild);
         }
         let objectStore = DB.transaction('events').objectStore('events');
+<<<<<<< HEAD
+        objectStore.openCursor().onsuccess = function (event) {
+=======
         objectStore.openCursor().onsuccess = function(event) {
+>>>>>>> main
             let cursor = event.target.result;
             if (cursor) {
                 const li = document.createElement('li');
@@ -64,7 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 // change.className = 'changeEvent';
                 line.id = 'line';
 
+<<<<<<< HEAD
+                //change.innerHTML = `<i class="fa fa-remove btn deleteEvent" id="deleteEvent"></i> <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit btn"></i> </a>`;
+=======
                 // change.innerHTML = `<i class="fa fa-remove btn deleteEvent" id="deleteEvent"></i> <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit btn"></i> </a>`;
+>>>>>>> main
                 link.href = `event.html?id=${cursor.value.id}`;
                 link.innerHTML = `<img src=${cursor.value.imageSource} class='img-fluid event-image'></img>`;
                 li.appendChild(link);
@@ -86,21 +97,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     //Creating the Database
     let eventDB = window.indexedDB.open("eventOrganizer", 1);
+<<<<<<< HEAD
+    eventDB.onerror = function (event) {
+        console.log("Error Opening Database.");
+    }
+    eventDB.onsuccess = function (event) {
+=======
     eventDB.onerror = function(event) {
         console.log("Error Opening Database.");
     }
     eventDB.onsuccess = function(event) {
+>>>>>>> main
         DB = eventDB.result;
         console.log("Database Opened Succesfully!");
         console.log(DB);
         displayEvents();
     }
+<<<<<<< HEAD
+    eventDB.onupgradeneeded = function (event) {
+        DB = event.target.result;
+        DB.onerror = function (event) {
+            console.log("Error Loading Database.");
+        }
+        //Creating the objectStore as events (The whole data will be there)
+=======
     eventDB.onupgradeneeded = function(event) {
         DB = event.target.result;
         DB.onerror = function(event) {
                 console.log("Error Loading Database.");
             }
             //Creating the objectStore as events (The whole data will be there)
+>>>>>>> main
         let store = DB.createObjectStore("events", {
             keyPath: 'id',
             autoIncrement: true
@@ -109,10 +136,19 @@ document.addEventListener('DOMContentLoaded', () => {
         store.createIndex('eventTitle', 'imageSource', {
             unique: false
         });
+<<<<<<< HEAD
+        store.transaction.oncomplete = function (event) {
+            console.log('Database is ready and fields are created.');
+        }
+    }
+
+    
+=======
         store.transaction.oncomplete = function(event) {
             console.log('Database is ready and fields are created.');
         }
     }
+>>>>>>> main
     form.addEventListener('submit', addNewEvent);
 
 
