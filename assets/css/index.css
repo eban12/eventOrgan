@@ -1,4 +1,5 @@
 /* #f05537 */
+<<<<<<< HEAD
 body {
   margin: 0;
   padding: 0;
@@ -266,6 +267,281 @@ body {
   text-align: end;
 }
 
+=======
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: 2.4px solid #ff4d28;
+}
+
+.topnav a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.topnav div {
+    float: right;
+}
+
+.navitem:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.topnav a.active {
+    color: blue;
+}
+
+.card {
+    margin: auto;
+    flex: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    max-width: 20rem;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+#logo-font {
+    font-family: 'Kaushan Script', cursive;
+    color: #f05537;
+    font-size: 1.5rem;
+}
+
+#logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+#searchBar {
+    padding: 0.5rem;
+    margin-top: 0.6rem;
+    margin-left: 3rem;
+    width: 25rem;
+    background-color: #edf5f1;
+    border: none;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    z-index: 9999999;
+    display: none;
+}
+
+.hovered {
+    background-color: #fff;
+    width: 15rem;
+    border-bottom: 1px solid #ff4d28;
+    transition: visibility 1s, opacity 1s linear;
+}
+
+.hovered:hover {
+    background-color: #f0f0f0;
+}
+
+#event {
+    /* background-image: url(http://www.influenceim.com/wp-content/uploads/2017/07/event-planningand-management-1024x683-750x350.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    height: 370px;
+    width: 100%
+}
+
+.emailtop {
+    vertical-align: bottom;
+    margin-top: 0.4rem;
+}
+
+.emailtop:hover {
+    background-color: #f0f0f0;
+}
+
+.show-hidden {
+    z-index: 9999;
+}
+
+.show-hidden:hover .hide {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    top: 3.4rem;
+    right: 0rem;
+    z-index: 9999;
+}
+
+.price-bottom {
+    vertical-align: bottom;
+}
+
+.card {
+    max-width: 100%;
+}
+
+.eventImage {
+    width: 67%;
+}
+
+.image-holder {
+    display: flex;
+}
+
+.tags {
+    border-style: solid;
+    border-radius: 5rem;
+    text-decoration: none !important;
+    color: #000;
+    padding: 0.2rem;
+}
+
+.tags:hover {
+    color: #ff4d28;
+}
+
+.share-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.share-icons {
+    flex: none;
+    margin: 0.2rem;
+    background-color: #a9a9a9;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5rem;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.share-icons:hover {
+    color: #ff4d28;
+}
+
+.share-icons i {
+    vertical-align: bottom;
+}
+
+.line-event {
+    border-bottom: 1px solid #000;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hide-name {
+    display: none;
+}
+
+.show-name {
+    padding: 2rem;
+}
+
+.show-name a {
+    color: #aaa;
+}
+
+.show-name:hover .hide-name {
+    display: block;
+    position: absolute;
+    background-color: #000;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 1rem;
+}
+
+.cards-home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cards-home li {
+    max-width: 27%;
+    flex: auto;
+    list-style-type: none;
+    margin: 2rem;
+}
+
+.add-event>textarea {
+    margin: 0.3rem;
+}
+
+.event-image {
+    width: 100%;
+}
+
+.modal {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.modal-dialog {
+    width: 50rem;
+}
+
+.event-description {
+    width: 100%;
+}
+
+.event-detail {
+    width: 100%;
+}
+
+#line {
+    width: 100%;
+    border-bottom: 1px solid #ff4d28;
+}
+
+#cardEvent {
+    height: 26rem;
+}
+
+.bottomButton {
+    text-align: right;
+    float: right;
+    margin-right: 1rem;
+}
+
+.changeEvent {
+    width: 100%;
+    padding: 1rem;
+    text-align: end;
+}
+
+
+>>>>>>> main
 /* .changeEvent > i{
   float: right;
   padding: 1rem;
@@ -274,6 +550,7 @@ body {
   float: right;
   padding: 1rem;
 } */
+<<<<<<< HEAD
 #firstNavBar {
   float: left;
 }
@@ -284,4 +561,400 @@ body {
 #uniqueP{
   margin-top: 0;
   margin-bottom: 0rem;
+=======
+
+#firstNavBar {
+    float: left;
+}
+
+#searchBarNavBar {
+    float: left;
+}
+
+#searchBarNavBar:focus {
+    border: #1247f7;
+}
+
+#uniqueP {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+
+/* footere */
+
+.footer {
+    background: #2b105e;
+    color: rgb(231, 229, 225);
+    padding-left: 3%;
+    /* margin-top: 5%; */
+    /* margin-top: 100%; */
+    /* align-items: flex-end; */
+    margin-top: 18%;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#innerfotter ul {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#innerfotter ul li {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* loogin */
+
+.cardslogin {
+    width: 40%;
+    box-shadow: 0 4px 8px o rgba(65, 62, 62, 0.2);
+    transition: 0.3s;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    margin-left: 30%;
+}
+
+.contaainerlogin {
+    padding: 2px 0px;
+}
+
+.cardslogin {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.cardslogin {
+    border-radius: 10px 10px 0 0;
+}
+
+#logologin {
+    color: #ff4d28;
+    font-size: 30vh;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#p_login {
+    color: black;
+    font-size: 5vh;
+    text-align: center;
+    margin-top: -150px;
+}
+
+#username-boxlogin {
+    border: 0.5px solid rgb(189, 184, 184);
+    width: 75%;
+    padding: 12px;
+    background-color: #F5FFFA;
+    margin-left: 20px;
+}
+
+#password-boxlogin {
+    /* border: 0.5px solid rgb(189, 184, 184); */
+    width: 75%;
+    padding: 12px;
+    background-color: #F5FFFA;
+    margin-left: 20px;
+}
+
+#loginbtn {
+    width: 80%;
+    padding: 12px;
+    background-color: #ff4d28;
+    color: white;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#loginbtn a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logofooter,
+img {
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+
+/* Ticket style */
+
+
+/* #bodycontainer {
+    background: #eee;
+}
+
+#ticketcontainer {
+    width: 80%;
+    height: 12rem;
+    box-shadow: 0 4px 8px o rgba(116, 6, 6, 0.2);
+    transition: 0.3s;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    background: white;
+}
+
+#ticketcontainer {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.18);
+    transition: 0.4s;
+    align-self: center;
+}
+
+#ticket-img {
+    width: 15rem;
+    height: 12rem;
+    margin-left: -14px;
+}
+
+h6 {
+    margin-top: -20;
+    color: #ff4d28;
+}
+
+#addtcurt {
+    background: #ff4d28;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.18);
+    transition: 0.4s;
+    margin-left: 26rem;
+    margin-top: 4rem;
+}
+
+#icon {
+    background: rgb(177, 175, 175);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin-left: 30rem;
+    margin-top: -2rem;
+}
+
+#fd {
+    color: #ff4d28;
+    /* margin-bottom: -2rem; */
+
+
+/* margin-left: 1rem; */
+
+
+/* margin-top: -5rem; 
+
+
+}
+#FormControlSelect {
+    width: 4rem;
+    height: 2rem;
+}
+*/
+
+
+/* 
+.si
+*/
+
+.sidenavbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(248, 248, 248);
+}
+
+.sidenavbar nav div ul {
+    padding-top: 2rem;
+    font-size: 15px;
+    display: block;
+}
+
+.sidenavbar #this {
+    margin-top: 50px;
+    margin-left: 15px;
+    display: block;
+}
+
+.sidenavbar #this li a {
+    color: rgb(14, 13, 13);
+    text-decoration: none;
+    margin-top: 30px;
+    margin-left: 40px;
+    display: block;
+    font-size: 20px;
+}
+
+.sidenavbar #this a:hover {
+    background: rgb(75, 82, 75);
+    color: white;
+}
+
+.main {
+    top: 0;
+    margin-left: 20rem;
+    font-size: 28px;
+    /* padding: 0px 10px; */
+}
+
+#foot {
+    color: red;
+    margin-left: 18rem;
+    margin-top: 0rem;
+}
+
+.contacts {
+    /* margin-left: -6rem; */
+}
+
+
+/*  */
+
+#psbtn {
+    background: #ff4d28;
+    color: white;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+#currentInputPassword,
+#newtPassword,
+#repeatPassword,
+.inputarea {
+    height: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* For Card Detail page  */
+
+@media (max-width: 320px) {
+    .topnav {
+        overflow: hidden;
+        background-color: #fff;
+        border-bottom: 2.4px solid #ff4d28;
+    }
+    .topnav a {
+        color: #000;
+        text-align: justify;
+        text-decoration: none;
+        font-size: 10px;
+        display: inline;
+    }
+    /* .topnav div {
+        float: right;
+        display: block;
+    } */
+    .navitem:hover {
+        background-color: #f0f0f0;
+        color: black;
+    }
+    .topnav a.active {
+        color: blue;
+    }
+    .contacts {
+        margin-left: 1rem;
+        font-size: 12px;
+        display: block;
+    }
+    .sidenavbar {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(248, 248, 248);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    #psbtn {
+        background: #ff4d28;
+        color: white;
+        width: 100%;
+    }
+    .cardslogin {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.4s;
+        border-radius: 10px;
+        align-self: center;
+        width: 15rem;
+        font-size: 15px;
+        margin-left: 30px;
+    }
+    .sidenavbar #this a:hover {
+        background: rgb(75, 82, 75);
+        color: white;
+    }
+    #detail_card {
+        padding-right: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        margin-left: 1rem;
+        width: 10rem;
+        font-size: 12px;
+    }
+    .sidenavbar {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(248, 248, 248);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    #foot {
+        color: red;
+        margin-left: -18rem;
+        text-align: center;
+        margin-top: 0rem;
+    }
+    .footer {
+        background: #2b105e;
+        color: rgb(231, 229, 225);
+        padding-left: 3%;
+        padding-left: 80%;
+        margin-top: 18%;
+        text-align: left;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .cardslogin {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.4s;
+        border-radius: 10px;
+        align-self: center;
+        width: 15rem;
+        font-size: 15px;
+        margin-left: 4rem;
+    }
+    .sidenavbar #this a:hover {
+        background: rgb(75, 82, 75);
+        color: white;
+    }
+>>>>>>> main
 }

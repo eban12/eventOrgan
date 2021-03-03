@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #eee;
+    color: #06072cd0;
+}
+
+header {
+    height: 50px;
+    background: #fff;
+    z-index: 12;
+    border-bottom: 1px solid gray;
+}
+
+main {
+    padding: 35px;
+}
+
+.event__detail-background {
+    background: url("https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F125073173%2F485586024857%2F1%2Foriginal.20210203-193029?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C5000%2C2500&s=66104b87a58c2572cab3b1cc16c5928e");
+    filter: blur(25px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mask {
+    position: absolute;
+    top: 548px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 50px;
+    background: #eee;
+}
+
+.event__detail {
+    width: 85%;
+    margin: auto;
+    margin-top: 35px;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.detail__side-1 {
+    width: 70%;
+}
+
+.detail__side-1 img {
+    width: 100%;
+    min-height: 100%;
+    border-top-left-radius: 5px;
+}
+
+.detail__side-2 {
+    width: 30%;
+}
+
+.detail__header-side-2 {
+    position: relative;
+    background: #eee;
+    border-top-right-radius: 5px;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.detail__event-date {
+    width: 50px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.detail__event-date .day {
+    font-size: 18px;
+}
+
+.detail__event-info {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.detail__event-title {
+    font-size: 20px;
+}
+
+.detail__organizer {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+.detail__price {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.detail__ticketbar {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid rgba(180, 179, 179, 0.637);
+    border-bottom: 1px solid rgba(180, 179, 179, 0.637);
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background: #0e8548;
+}
+
+.detail__ticketbar .btn {
+    width: 28%;
+    display: block;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.datail__body-side-2 {
+    padding: 40px 15px;
+}
+
+.datail__body-side-2 p {
+    margin-bottom: 10px;
+}
+
+.datail__body-side-2 section {
+    margin-bottom: 50px;
+}
+
+.detail__location {
+    font-weight: 500;
+}
+
+.detail__body-side-1 {
+    padding: 30px;
+}
+
+.detail__footer {
+    border-top: 1px solid rgba(180, 179, 179, 0.637);
+    padding: 30px;
+    margin: 0 50px;
+    text-align: center;
+}
+
+.detail__footer p {
+    line-height: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+event-card {
+    width: 23%;
+    min-height: 100%;
+}
+
+.interests__side1 {
+    width: 30%;
+    height: 100vh;
+    background: #fff;
+    padding: 40px;
+}
+
+.interests__side1 h1 {
+    font-size: 48px;
+    margin-top: 30px;
+}
+
+.interests__side1 p {
+    line-height: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.interests__side-2 {
+    flex: 1;
+    min-height: 100%;
+}
+
+.intersets__card {
+    background: #fff;
+    width: 80%;
+    padding: 40px 20px;
+    margin: 50px auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.input__group input[type=checkbox] {
+    height: 0;
+    width: 0;
+}
+
+.input__group {
+    display: inline-block;
+}
+
+.btn__checkbox {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #eee;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+}
+
+.interest__selected {
+    background: #ff4d28;
+    color: #fff;
+}
+
+section p {
+    font-size: 12px;
+}
+
+@media (max-width: 325px) {
+    .detail__side-2 {
+        width: 400px;
+    }
+    .detail__event-info {
+        margin-top: 10px;
+        margin-left: -18px;
+        width: fit-content;
+    }
+    .detail__side-1 img {
+        width: 20px;
+        height: 20px;
+        background: green;
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 0px;
+    }
+    p {
+        font-size: 8px;
+    }
+    .interests__side1 {
+        width: 0%;
+        height: 30vh;
+        background: white;
+        width: fit-content;
+    }
+    .interests__side1 p {
+        line-height: 14px;
+        font-weight: 5;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .interests__side1 h1 {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .interests__side-2 {
+        flex: 1;
+        min-height: 100%;
+        margin-top: -30px;
+        width: fit-content;
+    }
+    .input__group {
+        display: block;
+        width: 100%;
+    }
+    .detail__side-1 img {
+        width: 230px;
+        height: 120px;
+    }
+    .detail__event-date {
+        width: 50px;
+        text-align: center;
+        margin-top: 1px;
+        font-weight: 100px;
+        font-size: 15px;
+        margin-left: -1rem;
+    }
+    .detail__event-date .day {
+        font-size: 15px;
+    }
+    .detail__event-info {
+        margin-top: 10px;
+        margin-left: -17px;
+        width: fit-content;
+    }
+    .detail__event-title {
+        font-size: 18px;
+        font-weight: 100;
+    }
+    /*
+    .detail__side-2 {
+        width: fit-content;
+    } */
+}
+
+@media (max-width: 425px) {
+    .detail__side-2 {}
+    .detail__event-info {
+        margin-top: 10px;
+        margin-left: -18px;
+        width: fit-content;
+    }
+}
+
+@media(max-width: 768px) {
+    #foot {
+        color: white;
+        margin-left: -18rem;
+        text-align: center;
+        margin-top: 0rem;
+    }
+    .footer {
+        background: #2b105e;
+        color: rgb(231, 229, 225);
+        padding-left: 3%;
+        padding-left: 80%;
+        margin-top: 18%;
+        text-align: left;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+    }
+}
