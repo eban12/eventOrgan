@@ -1925,3 +1925,112 @@ h3 {
         color: white;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+the new nav bar that is rsponsive
+<div class="topnav" id="topNavbarDesktop">
+        <nav class="navbar navbar-expand-lg " id="this">
+            <div class="navbar-brand" id="firstNavBar">
+                <a href="./index.html" id="logo-font" class="navitem">
+                    <img src="./assets/img/EventOrganizer.PNG" alt="logo" id="logo"> EventOrgan
+                </a>
+            </div>
+            <button class="navbar-toggler" data-toggle="collapse" type="button" data-bs-toggle="collapse" data-target="#tgleed" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon  badge-secondary"></span></button>
+
+            <div class="collapse navbar-collapse mr-5" id="tgleed">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div id="searchBarNavBar">
+                            <input type="text" id="searchBar" placeholder="Search For Event">
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="right navitem" href="#createEvent">
+
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-plus" data-toggle="modal" data-target="#exampleModal"></i>
+                            <p id="uniqueP" data-toggle="modal" data-target="#exampleModal">Create Event</p>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Create Event</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="add-event p-1">
+                                                <input type="text" class="event-title form-control m-1" placeholder="Enter Event Title" required>
+                                                <input type="text" id="eventImage" class="event-image form-control m-1" placeholder="Link of Event Image" required>
+                                                <input type="text" id="eventLocation" class="event-location form-control m-1" placeholder="Location of Event" required>
+                                                <textarea class="form-control event-description m-1" cols="30" rows="5" placeholder="Event Description" required></textarea>
+                                                <textarea class="form-control event-detail m-1" cols="30" rows="5" placeholder="Event Detail" required></textarea>
+                                                <p></p>
+                                                <div id="line"></div>
+                                                <br>
+                                                <button type="button" class="btn btn-dark bottomButton" data-dismiss="modal"><i class="fa fa-window-close"></i></button>
+                                                <button type="submit" class="btn btn-primary bottomButton">Create Event</button>
+
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="like.html" class="right navitem">
+                            <i class="fa fa-heart"></i> Likes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ticket.html" class="right navitem">
+                            <i class="fa fa-ticket"></i> Tickets
+                        </a>
+                    </li>
+                    <li>
+                        <div class="show-hidden nav-item">
+
+                            <a href="mailto:it.naol.dame12@gmail.com" class="emailtop">
+                                <i class="fa fa-user"></i> it.naol.dame12@gmail.com
+                            </a>
+                            <div class="hide">
+                                <a href="./index.html" class="hovered"><i class="fa fa-calendar"></i> Browse Events</a>
+                                <a href="contactInfo.html" class="hovered"><i class="fa fa-cog"></i> Account Settings</a>
+                                <a href="signup.html" class="hovered"><i class="fa fa-sign-out"></i> Logout</a>
+                                <a href="favorite.htm" class="hovered"><i class="fa fa-heart "></i> Favorite</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+    </div>
