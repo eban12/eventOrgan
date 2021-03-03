@@ -9,6 +9,7 @@ const eventDetail = document.querySelector('.event-detail');
 const ShowImageSource = document.getElementById('showImageSrc');
 const eventLocation = document.querySelector('#eventLocation');
 
+
 filter.addEventListener('keyup', filterTasks);
 
 function filterTasks() {
