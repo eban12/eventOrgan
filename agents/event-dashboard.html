@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" type="module" defer></script>
+    <script src="assets/js/eventDashboard.js" type="text/javascript" defer></script>
+    <title>Document</title>
+</head>
+<body class="dashboard">
+    <header-component></header-component>
+    <main class="main event-dashboard">
+        <aside class="event-dashboard__sidebar">
+            <ul>
+                <li><a href="index.html">Manage my events</a></li>
+                <li class="event-dashboard__event-title">
+                    Test
+                    <div class="event-dashboard__event-type">
+                        <i class="fa fa-repeat" aria-hidden="true"></i>
+                        Recurring event
+                    </div>
+                </li>
+                <li class="dashboard-menu__triger" data-target="#event-dashboard__basic-info">
+                    <div class="event-dashboard__steps">
+                        1
+                    </div>
+                    Basic info
+                </li>
+                
+                <li class="dashboard-menu__triger" data-target="#event-dashboard__details">
+                    <div class="event-dashboard__steps">
+                        2
+                    </div>
+                    Details
+                </li>
+                <li class="dashboard-menu__triger" data-target="#event-dashboard__tickets">
+                    <div class="event-dashboard__steps">
+                        3
+                    </div>
+                    Tickets
+                </li>
+                <li>
+                    <div class="event-dashboard__steps">
+                        4
+                    </div>
+                    Publish
+                </li>
+                <li>
+                    Dashboard
+                </li>
+            </ul>
+        </aside>
+        <div class="event-dashboard__content">
+            <div id="event-dashboard__basic-info" class="event-dashboard__active dashboard-menu">
+                <section class="create-section"> 
+                    <div class="icon">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Basic Info</h1>
+                        <p>Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</p>
+        
+                        <div class="input-group">
+                            <input type="text" id="event-title">
+                                <label for="event-title">Event title</label>
+                            </input>
+                        </div>
+        
+                        <div class="input-group">
+                            <input type="text" id="event-organizer">
+                                <label for="event-organizer">Organizer description</label>
+                            </input>
+                        </div>
+        
+                        <div class="input-group">
+                            <select id="" class="selections">
+                                <option selected>Type</option>
+                            </select>
+                            <select id="" class="selections">
+                                <option selected>Category</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="create-section">
+                    <div class="icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Location</h1>
+                        <p>Help people in the area discover your event and let attendees know where to show up.</p>
+                        
+                        <div class="radios">
+                            <div class="radio-group active-radio">
+                                <input type="radio" id="venue" name="venueType" class="btn-radio" checked>
+                                <label for="venue">Venue</label>
+                            </div>
+        
+                            <div class="radio-group">
+                                <input type="radio" id="online" name="venueType" class="btn-radio">
+                                <label for="online">Online</label>
+                            </div>
+        
+                            <div class="radio-group">
+                                <input type="radio" id="announce" name="venueType" class="btn-radio">
+                                <label for="announce">To be announced</label>
+                            </div>
+                        </div>
+        
+                        <div class="address-form">
+                            <h2 class="sub-title">Address</h2>
+                            <div class="input-group">
+                                <input type="text" id="address-street">
+                                    <label for="address-street">Street</label>
+                                </input>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="address-city">
+                                    <label for="address-city">City</label>
+                                </input>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="address-state">
+                                    <label for="address-state">State</label>
+                                </input>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="address-country">
+                                    <label for="address-country">Country</label>
+                                </input>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="create-section">
+                    <div class="icon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Date and time</h1>
+                        <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
+                        
+                        <div class="radios">
+                            <div class="radio-group active-radio">
+                                <input type="radio" id="single" name="eventType" class="btn-radio" checked>
+                                <label for="single">Single event</label>
+                            </div>
+        
+                            <div class="radio-group">
+                                <input type="radio" id="multiple" name="eventType" class="btn-radio">
+                                <label for="multiple">Multiple events</label>
+                            </div>
+                        </div>
+        
+                        <div class="address-form">
+                            <div class="input-group">
+                                <input type="date" id="start-date">
+                                    <label for="start-date">Start date</label>
+                                </input>
+                            </div>
+                            <div class="input-group">
+                                <input type="time" id="start-time">
+                                    <label for="start-time">Start time</label>
+                                </input>
+                            </div>
+                            <div class="input-group">
+                                <input type="date" id="end-date" disabled>
+                                    <label for="end-date">End date</label>
+                                </input>
+                            </div>
+                            <div class="input-group">
+                                <input type="time" id="end-time">
+                                    <label for="end-time">End time</label>
+                                </input>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div id="event-dashboard__details" class="dashboard-menu">
+                <section class="create-section">
+                    <div class="icon">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Main event image</h1>
+                        <p>This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</p>
+        
+                        <div class="input-group event-dashboard__event-image">
+                            <input type="url" placeholder="https://example.png/(jpg)" id="event-image">
+                                <label for="event-title">Event image</label>
+                            </input>
+                            <img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg" alt="" srcset="" id="event-image-preview">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="create-section">
+                    <div class="icon">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Description</h1>
+                        <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
+        
+                        <div class="input-group">
+                            <label for="event-sammary" id="summary-lable">Summary</label>
+                            <textarea type="" id="event-sammary" ></textarea>
+                        </div>
+                        <div id="editor"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="event-dashboard__tickets" class="dashboard-menu">
+                <section class="create-section">
+                    <div class="icon">
+                        <i class="fa fa-ticket" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Tickets</h1>
+                        <div class="event-dashboard__tickets-list">
+                            <button class="btn btn-primary align-right modal-triger" data-target="add-ticket-modal">Add Ticket</button>
+                            <div class="tickets-list"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="modal modal__container" id="add-ticket-modal">
+        <div class="modal__content">
+            <h2 class="modal__header">Add ticket</h2>
+            <div class="modal__body">
+                <form id="add-ticket-form">
+                    <div class="input-group">
+                        <input type="text" id="ticket-name" name="ticket-name">
+                            <label for="ticket-name">Ticket name</label>
+                        </input>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="number" id="ticket-quantity" name="ticket-quantity">
+                            <label for="ticket-quantity">Quantity</label>
+                        </input>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="number" id="ticket-price" name="ticket-price">
+                            <label for="ticket-price">Price</label>
+                        </input>
+                    </div>
+
+                    <p>Ticket sell ends</p>
+                    <div class="ticket__sell-end">
+                        <div class="input-group">
+                            <input type="number" id="ticket-sell-end" name="ticket-sell-end">
+                            </input>
+                        </div>
+                        <div class="input-group">
+                            <select id="ticket-sell-end-timeunit" class="selections" name="ticket-sell-end-timeunit">
+                                <option selected value="hours">Hours</option>
+                                <option value="days">Days</option>
+                                <option value="minutes">Minutes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p>Before event begins</p>
+                    <button class="btn btn-primary align-right">Add</button>
+                </form>
+           </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
+</body>
+</html>
