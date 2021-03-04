@@ -4,7 +4,38 @@ class Event extends HTMLElement {
         this.root = this.attachShadow({mode: 'closed'});
     }
 
+    getMonthName(month) {
+        switch(month) {
+            case "01": 
+                return'Jan'
+            case "02":
+                return 'Feb'
+            case "03":
+               return'Mar'
+            case "04":
+               return'Apr'
+            case "05":
+               return'May'
+            case "06":
+               return'Jun'
+            case "07":
+               return'Jul'
+            case "08":
+               return'Aug'
+            case "09":
+               return'Sep'
+            case "10":
+               return'Oct'
+            case "11":
+               return'Nov'
+            default:
+               return 'Dec'
+        }
+    }
+
     set event(eventObj) {
+        
+
         this.root.innerHTML = `
 
             <style>
@@ -86,21 +117,21 @@ class Event extends HTMLElement {
             <ul class="event-container">
                 <li class="event-li">
                     <div class="date">
-                        <p class="month">${eventObj.date.toLocaleString('default', { month: 'short' })}</p>
-                        <p class="day">${eventObj.date.getDate()}</p>
+                        <p class="month">${this.getMonthName(eventObj.startDate.split('-')[1])}</p>
+                        <p class="day">${eventObj.startDate.split('-')[2]}</p>
                     </div>
 
-                    <img src=${eventObj.img}>
+                    <img src=${eventObj.image || "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg"}>
                     <div class="detail">
                         <p class="darker">${eventObj.title}</p>
                         <p class="venue">${eventObj.venue}</p>
-                        <p class="event-date">${eventObj.date}</p>
-                        <p class="darker">${eventObj.type}</p>
+                        <p class="event-date">${eventObj.startDate}</p>
+                        <p class="darker">${eventObj.category}</p>
                     </div>
                 </li>
                 <li><p>${eventObj.sold ? eventObj.sold: '----'}</p></li>
                 <li><p>${eventObj.gross ? eventObj.gross: '----'}</p></li>
-                <li><p class="status">${eventObj.status}</p></li>
+                <li><p class="status">${eventObj.isPublished ? "Published": "Draft"}</p></li>
             </ul>
         `
     }

@@ -36,7 +36,7 @@ import "../../components/Ticket.js";
 
               prev.classList.remove('active-radio');
               el.parentElement.classList.add('active-radio');
-
+              console.log(el.checked, el)
               if (el === venue) {
                 addressForm.style.display = 'flex';
               } else if (addressForm.parentElement === radios.parentElement) {

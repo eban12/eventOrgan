@@ -6,13 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/table.css">
+    <script src="../includes/dexieOffline.js" defer></script>
+    <script src="../includes/db.js" defer></script>
     <script src="assets/js/main.js" type="module" defer></script>
+    <script src="assets/js/eventsList.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <header-component data-current="events"></header-component>
     <main class="home-main">
-        <events-list></events-list>    
+        <div>
+            <section class="title-section">
+                <h1>Events</h1>
+                <button><a href="create-event.html">Create Event</a></button>
+            </section>
+            
+            <section class="filter-section">
+                <div class="search-bar">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Search events" id="search-input"/>
+                </div>
+            </section>
+    
+            <section class="table">
+                <ul class="table-header">
+                    <li class="event">Event</li>
+                    <li>Sold</li>
+                    <li>Gross</li>
+                    <li>Status</li>
+                </ul>
+                <div class="table-body"></div>
+            </section>
+        </div> 
     </main>
 </body>
 </html>
