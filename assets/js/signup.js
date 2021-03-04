@@ -8,7 +8,7 @@ const createAccount = document.querySelector("#createAccount")
 form.addEventListener("submit", signUp)
 
 
-function signUp(e) {
+async function signUp(e) {
     e.preventDefault()
     const newUser = {
         username: username.value,
@@ -17,7 +17,7 @@ function signUp(e) {
         userType: userType.value
     }
 
-    db.users.put(newUser).then((result) => {
+    await db.users.put(newUser).then((result) => {
         document.cookie = `userId=${result}`
         window.location.href = "index.html"
     }).catch(error => console.log(error))
