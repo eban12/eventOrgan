@@ -10,5 +10,15 @@ form.addEventListener("submit", signUp)
 
 function signUp(e) {
     e.preventDefault()
-    alert("nice")
+    const newUser = {
+        username: username.value,
+        email: email.value,
+        password: password.value,
+        userType: userType.value
+    }
+
+    db.users.put(newUser).then((result) => {
+        document.cookie = `userId=${result}`
+        window.location.href = "index.html"
+    }).catch(error => console.log(error))
 }
