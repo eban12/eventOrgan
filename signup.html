@@ -1,46 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/img/EventOrganizer.PNG">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="./assets/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="./assets/css/signup.css" rel="stylesheet">
-    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
-    <div class="contaainerlogin">
+    <main class="container">
+        <div class="row">
+            <section class="col-md-6 my-5 offset-md-3">
 
-        <div class="cardslogin ">
-            <h1 id="logologin">eo</h1>
-            <!-- <div id="logo"><img src="./assets/img/EventOrganizer.PNG" alt=""></div> -->
-            <p id="p_login">Sign up or Log in</p>
+                <div class="card shadow p-5">
+                    <form method="POST" action="#">
 
-            <div class="containerlogin">
-                <form id="signinformlogin">
-                    <div id="email-boxlogin">
-                        <input id="username-boxlogin" placeholder="Email Address" name="email" type="email" required>
-                    </div><br>
-                    <div id="pswd-boxlogin">
-                        <!-- <label id="pswlogin">Password</label><br> -->
-                        <input id="password-boxlogin" placeholder="Enter password" name="password" type="password" required>
-                    </div><br><br> --
-                    <button id="loginbtn" type="submit" required onclick="openindex()"><a href="index.html">Get start</a> </button>
-                    <!-- <button id="loginbtn" onclick="openindex()"> j</button> -->
-                </form>
-                <div>
-                    <small>by clicking Get started get to your account or chose other to create account if you dont have or to log in</small>
+                        <h3 class="text-uppercase mb-4">Sign Up</h3>
+                        <hr>
+                        <div class="form-group">
+                            <label class="py-2">Username</label>
+                            <input type="text" placeholder="Username" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label class="py-2">Email</label>
+                            <input type="email" placeholder="Email" class="form-control" required="required">
+                        </div>
+
+                        <label for="Password" class="mt-2 py-2">Password</label>
+                        <div class="input-group mb-3">
+                            <input type="password" name="password" required="required" id="password" class="form-control" placeholder="Enter Password" aria-label="Enter Password" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-eye"
+                                        aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="py-2">Sign up as</label>
+                            <select id="userType" class="form-control" required="required">
+                                <option value="">Choose user type</option>
+                                <option value="u">User</option>
+                                <option value="a">Agent</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-secondary float-right mt-3">Create Account</button>
+
+                        <p class="mt-3 text-white">ALready have an Account ? <a href="login.html" class="text-white"> Login</a></p>
+
+                    </form>
                 </div>
-            </div>
+            </section>
         </div>
-    </div>
-    <script src="./asset/style/js/login.js" type="module" defer></script>
+    </main>
+    <!-- Optional JavaScript; choose one of the two! -->
 
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script src="./assets/js/login.js"></script>
 </body>
 
 </html>
