@@ -1,6 +1,6 @@
 import "../../components/Header.js";
-import "../../components/EventsList.js";
 import "../../components/Ticket.js";
+import '../../components/Event-component.js';
 
 (function () {
 
@@ -36,7 +36,7 @@ import "../../components/Ticket.js";
 
               prev.classList.remove('active-radio');
               el.parentElement.classList.add('active-radio');
-
+              console.log(el.checked, el)
               if (el === venue) {
                 addressForm.style.display = 'flex';
               } else if (addressForm.parentElement === radios.parentElement) {
@@ -45,6 +45,7 @@ import "../../components/Ticket.js";
 
               if (el === singleEvent) {
                 endDate.disabled = true;
+                endDate.value = "";
               } else if (radios.parentElement.contains(endDate)) {
                 endDate.disabled = false;
               }
