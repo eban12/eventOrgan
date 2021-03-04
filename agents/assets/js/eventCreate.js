@@ -21,7 +21,7 @@
         })
         
         form.addEventListener('reset', () => {
-            history.back();
+            history.back()
         })
     }
 
