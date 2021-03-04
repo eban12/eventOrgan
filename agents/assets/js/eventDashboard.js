@@ -4,6 +4,8 @@
     const address = document.querySelector('.address-form')
     const modal = document.querySelector('#add-ticket-modal')
     const imagePreview = document.querySelector("#event-image-preview")
+    const ticketList = document.querySelector('.tickets-list');
+    let ticketBtn = addTicketForm.querySelector('button')
     const DEFAULT_IMAGE = "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg"
     let EVENT;
     let editor;
@@ -20,19 +22,29 @@
 
       loadEvent()  
 
-      addTicketForm.addEventListener('submit', (e) => {
+      addTicketForm.addEventListener('submit', async (e) => {
           e.preventDefault();
           
           let unit = addTicketForm["ticket-sell-end-timeunit"].value;
           const ticketVals = {
-            id: 2,
-            name: addTicketForm["ticket-name"].value,
-            sellEnd: addTicketForm["ticket-sell-end"].value ,
+            title: addTicketForm["ticket-name"].value,
+            eventId: EVENT.id,
+            endTime: addTicketForm["ticket-sell-end"].value,
             timeUnit: unit,
-            amount: Number(addTicketForm["ticket-quantity"].value),
+            quantity: Number(addTicketForm["ticket-quantity"].value),
             price: Number(addTicketForm["ticket-price"].value),
           }
-          addTicket(ticketVals);
+
+          if (e.target.getAttribute('data-ticketId') === "") {
+            const res = await db.tickets.add(ticketVals)
+          } else {
+            ticketVals.id = Number(ticketBtn.getAttribute('data-ticketId'))
+            await db.tickets.put(ticketVals)
+          }
+          loadTickets()
+          ticketBtn.innerHTML = "Add"
+          ticketBtn.setAttribute('data-ticketId', "")
+
           addTicketForm.reset();
           modal.style.display = 'none';
         })
@@ -114,11 +126,34 @@
     
       // setup ckeditor
       editor.setData(event.description)
+
+      // setup tickets
+      loadTickets()
     }
   
+    async function loadTickets() {
+      ticketList.innerHTML = ""
+      let tickets = await db.tickets.where({eventId: EVENT.id}).toArray()
+      tickets.forEach(ticket => {
+        addTicket(ticket)
+      });
+    }
+
     function addTicket(ticketObj) {
-      const ticketList = document.querySelector('.tickets-list');
       const ticket = document.createElement('ticket-component');
+      ticket.setAttribute('data-id', ticketObj.id)
+      ticket.addEventListener('click', () => {
+        addTicketForm["ticket-name"].value = ticketObj.title
+        addTicketForm["ticket-sell-end-timeunit"].value = ticketObj.timeUnit 
+        addTicketForm["ticket-sell-end"].value = ticketObj.endTime
+        addTicketForm["ticket-quantity"].value = ticketObj.quantity
+        addTicketForm["ticket-price"].value = ticketObj.price
+
+        ticketBtn.innerHTML = "Save"
+        ticketBtn.setAttribute('data-ticketId', ticketObj.id)
+
+        modal.style.display = "flex"
+      })
       ticket.ticketVals = ticketObj;
       ticketList.appendChild(ticket);
     }
