@@ -17,8 +17,11 @@ async function signUp(e) {
         userType: userType.value
     }
 
-    await db.users.put(newUser).then((result) => {
-        document.cookie = `userId=${result}`
+    await db.users.put(newUser).then(async(result) => {
+
+        localStorage.setItem("userId", result)
+        const user = await db.users.where("userId").equals(parseInt(result)).first()
+        localStorage.setItem("userType", user.userType)
         window.location.href = "index.html"
     }).catch(error => console.log(error))
 }

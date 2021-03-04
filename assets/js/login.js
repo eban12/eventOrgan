@@ -28,8 +28,13 @@ async function login(e) {
                 console.log(user)
                 if (user.email == email.value) {
                     if (user.password == password.value) {
-                        document.cookie = `userId=${ user.id }`
-                        location.href = "index.html";
+                        localStorage.setItem("userId", user.id)
+                        localStorage.setItem("userType", user.userType)
+                        if (user.userType == "a") {
+                            location.href = "agents/index.html";
+                        } else {
+                            location.href = "index.html";
+                        }
                     } else {
                         console.log("password not matched.");
                     }
@@ -38,5 +43,4 @@ async function login(e) {
                 }
             });
         });
-
 }
