@@ -1,39 +1,62 @@
 import "./Event-Card.js";
 const eventsContainer = document.querySelector('.events_container');
 
-
 const events = db.events;
-const demoArray = {
-    "username": "username",
-    "events": 'events',
-    'tickets':'tickets',
-    'orders':'orders'
-}
+
+//just demo events you can add
 const demoEvent = {
-    'title':'title',
-    'category':'category',
-    'venue':'venue',
-    'startDate':'startDate',
-    'endDate':'endDate',
-    'startTime':'startTime',
-    'endTime':'endTime',
-    'image':'https://total-event.com/wp-content/uploads/2018/01/event-planning-microsoft-ignite.jpg',
-    'description':'description',
-    'agentId':'agentId',
-    'isPublished': true
-}
-const demoEvent2 = {
-    'title':'title',
-    'category':'category',
-    'venue':'venue',
-    'startDate':'startDate',
-    'endDate':'endDate',
-    'startTime':'startTime',
-    'endTime':'endTime',
-    'image':'https://learn.g2crowd.com/hubfs/action-adults-celebration-433452.jpg',
-    'description':'description',
-    'agentId':'agentId',
-    'isPublished': true
+    demoEvent1 : {
+        'title':'title',
+        'category':'category',
+        'venue':'venue',
+        'startDate': new Date(),
+        'endDate':'endDate',
+        'startTime':'startTime',
+        'endTime':'endTime',
+        'image':'https://total-event.com/wp-content/uploads/2018/01/event-planning-microsoft-ignite.jpg',
+        'description':'description',
+        'agentId':'agentId',
+        'isPublished': true
+    },
+    demoEvent2 : {
+        'title':'title',
+        'category':'category',
+        'venue':'venue',
+        'startDate': new Date(),
+        'endDate':'endDate',
+        'startTime':'startTime',
+        'endTime':'endTime',
+        'image':'https://learn.g2crowd.com/hubfs/action-adults-celebration-433452.jpg',
+        'description':'description',
+        'agentId':'agentId',
+        'isPublished': true
+    },
+    demoEvent3 : {
+        'title':'title',
+        'category':'category',
+        'venue':'venue',
+        'startDate': new Date(),
+        'endDate':'endDate',
+        'startTime':'startTime',
+        'endTime':'endTime',
+        'image':'https://zongo.io/blog/wp-content/uploads/2018/11/ev.jpg',
+        'description':'description',
+        'agentId':'agentId',
+        'isPublished': true
+    },
+    demoEvent4 : {
+        'title':'title',
+        'category':'category',
+        'venue':'venue',
+        'startDate': new Date(),
+        'endDate':'endDate',
+        'startTime':'startTime',
+        'endTime':'endTime',
+        'image':'https://www.umthunzi.co.za/2016/wp-content/uploads/2017/10/fotolia_169065284.jpg',
+        'description':'description',
+        'agentId':'agentId',
+        'isPublished': true
+    }
 }
 
 function addEvent(demoEvent) {
@@ -43,18 +66,22 @@ function addEvent(demoEvent) {
         alert("Error: " + error);
     });
 }
-addEvent(demoEvent);
-// addEvent(demoEvent2);
+
+// adding demo events to display
+addEvent(demoEvent.demoEvent1);
+addEvent(demoEvent.demoEvent2);
+addEvent(demoEvent.demoEvent3);
+addEvent(demoEvent.demoEvent4);
 
 if (eventsContainer) {
-    for (let i = 0; i < 20; i++) {
+    db.events.each(event =>{
         const card = document.createElement('event-card');
         card.cardDetail = {
-            id: i,
-            image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F121266491%2F432371562%2F1%2Foriginal.20201218-151931?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C39%2C638%2C319&s=0fc256519813a21445e49e8287923839",
-            name: "A Matter of Death and Life - Irvin Yalom",
-            date: "Tue, 9 March 2021"
+            id: event["id"],
+            image: event["image"],
+            name: event["title"],
+            date: event["startDate"]
         }
         eventsContainer.appendChild(card);
-    }
+    });
 }
