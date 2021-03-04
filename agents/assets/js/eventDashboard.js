@@ -4,6 +4,8 @@
     const address = document.querySelector('.address-form')
     const modal = document.querySelector('#add-ticket-modal')
     const imagePreview = document.querySelector("#event-image-preview")
+    const DEFAULT_IMAGE = "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg"
+    let EVENT;
     let editor;
     // intializer: sets up everything that needs intialization including adding event listners
     function init() {
@@ -34,6 +36,20 @@
           addTicketForm.reset();
           modal.style.display = 'none';
         })
+
+        eventEditForm["event-image"].addEventListener('change', (e) => {
+          imagePreview.setAttribute('src', e.target.value || DEFAULT_IMAGE)
+        })
+
+        eventEditForm.addEventListener('submit', (e) => {
+          e.preventDefault()
+          saveEvent()
+          location.reload()
+        })
+
+        eventEditForm.addEventListener('reset', (e) => {
+          loadEvent()
+        })
     }
   
     async function loadEvent() {
@@ -41,7 +57,9 @@
       const id = Number(urlParams.get("id"));
 
       const event = await db.events.get(id)
-      console.log(event);
+
+      // published 
+      EVENT = event
 
       // setup title and category
       eventEditForm["event-title"].value = event.title
@@ -92,7 +110,7 @@
 
       // setup details 
       eventEditForm["event-image"].value = event.image
-      imagePreview.setAttribute('src', event.image || "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg")
+      imagePreview.setAttribute('src', event.image || DEFAULT_IMAGE)
     
       // setup ckeditor
       editor.setData(event.description)
@@ -104,7 +122,34 @@
       ticket.ticketVals = ticketObj;
       ticketList.appendChild(ticket);
     }
+
+    async function saveEvent() {
+          EVENT.title = eventEditForm["event-title"].value
+          EVENT.category = eventEditForm["event-category"].value
+          EVENT.venue = getVenue()
+          EVENT.startDate = eventEditForm["start-date"].value
+          EVENT.endDate = eventEditForm["end-date"].value
+          EVENT.startTime = eventEditForm["start-time"].value
+          EVENT.endTime = eventEditForm["end-time"].value
+          EVENT.image = eventEditForm["event-image"].value
+          EVENT.description = editor.getData()
+
+          const k = await db.events.put(EVENT)
+          console.log(k);
+    }
   
+      function getVenue() {
+        if (eventEditForm["venue"].checked) {
+            return `${eventEditForm["address-street"].value}, ${eventEditForm["address-city"].value}, ${eventEditForm["address-state"].value}, ${eventEditForm["address-country"].value}`
+        }
+        
+        if (eventEditForm["online"].checked) {
+            return "Online event"
+        }
+
+        return "Venue to be announced"
+      }
+
     init()
     
   })();
