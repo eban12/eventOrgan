@@ -305,6 +305,13 @@ li.event-dashboard__event-title:hover {
     margin-right: 10px;
 }
 
+.modify {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 12;
+}
+
 .align-right {
     display: block;
     margin-left: auto;
