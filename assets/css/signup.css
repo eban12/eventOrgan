@@ -103,26 +103,26 @@ img {
     flex-wrap: wrap;
 }
 
-.sidenavbar {
+.sidenavbarr {
     position: relative;
     top: 0;
     left: 0;
     background-color: rgb(248, 248, 248);
 }
 
-.sidenavbar nav div ul {
+.sidenavbarr nav div ul {
     padding-top: 2rem;
     font-size: 15px;
     display: block;
 }
 
-.sidenavbar #this {
+.sidenavbarr #this {
     margin-top: 50px;
     margin-left: 15px;
     display: block;
 }
 
-.sidenavbar #this li a {
+.sidenavbarr #this li a {
     color: rgb(14, 13, 13);
     text-decoration: none;
     margin-top: 30px;
@@ -131,7 +131,7 @@ img {
     font-size: 20px;
 }
 
-.sidenavbar #this a:hover {
+.sidenavbarr #this a:hover {
     background: rgb(75, 82, 75);
     color: white;
 }
@@ -169,6 +169,11 @@ img {
         background: rgb(75, 82, 75);
         color: white;
     }
+    .contacts {
+        margin-left: 1rem;
+        font-size: 12px;
+        display: block;
+    }
 }
 
 @media (max-width: 768px) {
@@ -201,5 +206,13 @@ img {
         background-color: rgb(248, 248, 248);
         overflow-x: hidden;
         padding-top: 20px;
+    }
+    .contacts {
+        margin-left: 1rem;
+        width: 10rem;
+        font-size: 12px;
+    }
+    form {
+        width: 18rem;
     }
 }
