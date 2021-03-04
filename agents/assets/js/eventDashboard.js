@@ -5,7 +5,8 @@
     const modal = document.querySelector('#add-ticket-modal')
     const imagePreview = document.querySelector("#event-image-preview")
     const ticketList = document.querySelector('.tickets-list');
-    let ticketBtn = addTicketForm.querySelector('button')
+    const ticketBtn = addTicketForm.querySelector('button')
+    const dashboardTitle = document.querySelector('.event-dashboard__event-title')
     const DEFAULT_IMAGE = "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg"
     let EVENT;
     let editor;
@@ -72,6 +73,15 @@
 
       // published 
       EVENT = event
+
+
+      // event title setup
+      dashboardTitle.innerHTML = `
+        ${EVENT.title}
+        <div class="event-dashboard__event-type">
+            ${EVENT.endDate === "" ? 'Single event': '<i class="fa fa-repeat" aria-hidden="true"></i> Recurring event'}
+        </div>
+      `
 
       // setup title and category
       eventEditForm["event-title"].value = event.title
