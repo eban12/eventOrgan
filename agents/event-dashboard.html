@@ -53,7 +53,7 @@
                 </li>
             </ul>
         </aside>
-        <div class="event-dashboard__content">
+        <form class="event-dashboard__content">
             <div id="event-dashboard__basic-info" class="event-dashboard__active dashboard-menu">
                 <section class="create-section"> 
                     <div class="icon">
@@ -70,17 +70,26 @@
                         </div>
         
                         <div class="input-group">
-                            <input type="text" id="event-organizer">
-                                <label for="event-organizer">Organizer description</label>
-                            </input>
-                        </div>
-        
-                        <div class="input-group">
-                            <select id="" class="selections">
-                                <option selected>Type</option>
-                            </select>
-                            <select id="" class="selections">
-                                <option selected>Category</option>
+                            <select id="event-category" class="selections" required>
+                                <option selected disabled>Category</option>
+                                <option value="Music">Music</option>
+                                <option value="Bussines">Bussines</option>
+                                <option value="Food & Drink">Food & Drink</option>
+                                <option value="Community">Community</option>
+                                <option value="Arts">Arts</option>
+                                <option value="Film & Media">Film & Media</option>
+                                <option value="Sports & Fitness">Sports & Fitness</option>
+                                <option value="Science & Tech">Science & Tech</option>
+                                <option value="Travel & Outdoor">Travel & Outdoor</option>
+                                <option value="Charity & Causes">Charity & Causes</option>
+                                <option value="Spirituality">Spirituality</option>
+                                <option value="Family & Education">Family & Education</option>
+                                <option value="Government">Government</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Home & Lifestyle">Home & Lifestyle</option>
+                                <option value="Auto, Boat & Air">Auto, Boat & Air</option>
+                                <option value="Hobbies">Hobbies</option>
+                                <option value="School Activities">School Activities</option>
                             </select>
                         </div>
                     </div>
@@ -232,7 +241,7 @@
                     </div>
                 </section>
             </div>
-        </div>
+        </form>
     </main>
 
 
