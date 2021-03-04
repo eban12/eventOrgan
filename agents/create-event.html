@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="../includes/dexieOffline.js" defer></script>
+    <script src="../includes/db.js" defer></script>
     <script src="assets/js/main.js" type="module" defer></script>
     <script src="assets/js/eventCreate.js" type="text/javascript" defer></script>
     <title>Document</title>
@@ -26,23 +28,32 @@
                         it unique.</p>
 
                     <div class="input-group">
-                        <input type="text" id="event-title" name="event-title">
+                        <input type="text" id="event-title" name="event-title" required>
                         <label for="event-title">Event title</label>
                         </input>
                     </div>
 
                     <div class="input-group">
-                        <input type="text" id="event-organizer" name="event-organizer">
-                        <label for="event-organizer">Organizer description</label>
-                        </input>
-                    </div>
-
-                    <div class="input-group">
-                        <select id="event-type" name="event-type" class="selections">
-                            <option selected>Type</option>
-                        </select>
-                        <select id="" class="selections">
-                            <option selected>Category</option>
+                        <select id="event-category" class="selections" required>
+                            <option selected disabled>Category</option>
+                            <option value="Music">Music</option>
+                            <option value="Bussines">Bussines</option>
+                            <option value="Food & Drink">Food & Drink</option>
+                            <option value="Community">Community</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Film & Media">Film & Media</option>
+                            <option value="Sports & Fitness">Sports & Fitness</option>
+                            <option value="Science & Tech">Science & Tech</option>
+                            <option value="Travel & Outdoor">Travel & Outdoor</option>
+                            <option value="Charity & Causes">Charity & Causes</option>
+                            <option value="Spirituality">Spirituality</option>
+                            <option value="Family & Education">Family & Education</option>
+                            <option value="Government">Government</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Home & Lifestyle">Home & Lifestyle</option>
+                            <option value="Auto, Boat & Air">Auto, Boat & Air</option>
+                            <option value="Hobbies">Hobbies</option>
+                            <option value="School Activities">School Activities</option>
                         </select>
                     </div>
                 </div>
