@@ -7,6 +7,7 @@
     const ticketList = document.querySelector('.tickets-list');
     const ticketBtn = addTicketForm.querySelector('button')
     const dashboardTitle = document.querySelector('.event-dashboard__event-title')
+    const publishBtn = document.querySelector('#publish')
     const DEFAULT_IMAGE = "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg"
     let EVENT;
     let editor;
@@ -63,6 +64,20 @@
         eventEditForm.addEventListener('reset', (e) => {
           loadEvent()
         })
+
+        publishBtn.addEventListener('click', async () => {
+          if (EVENT.isPublished) {
+            EVENT.isPublished = false
+            let a = await db.events.put(EVENT)
+            console.log(publishBtn, EVENT.isPublished)
+            publishBtn.innerHTML = "Publish"
+          } else {
+            EVENT.isPublished = true
+            let a = await db.events.put(EVENT)
+            console.log(publishBtn)
+            publishBtn.innerHTML = "Unpublish"
+          }
+        })
     }
   
     async function loadEvent() {
@@ -74,7 +89,6 @@
       // published 
       EVENT = event
 
-
       // event title setup
       dashboardTitle.innerHTML = `
         ${EVENT.title}
@@ -82,6 +96,13 @@
             ${EVENT.endDate === "" ? 'Single event': '<i class="fa fa-repeat" aria-hidden="true"></i> Recurring event'}
         </div>
       `
+
+      // publishe or not
+      if (EVENT.isPublished) {
+        publishBtn.innerHTML = "Publish"
+      } else {
+        publishBtn.innerHTML = "Unpublish"
+      }
 
       // setup title and category
       eventEditForm["event-title"].value = event.title
