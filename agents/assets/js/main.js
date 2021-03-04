@@ -1,6 +1,6 @@
 import "../../components/Header.js";
-import "../../components/EventsList.js";
 import "../../components/Ticket.js";
+import '../../components/Event-component.js';
 
 (function () {
 
