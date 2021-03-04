@@ -6,5 +6,3 @@ db.version(4).stores({
     tickets: "++id, title, eventId, price, quantity, endTime, timeUnit",
     orders: "++id, userId, agentId, ticketId, eventId"
 });
-
-
