@@ -70,6 +70,25 @@
     font-size: 15px;
 }
 
+
+/* for footer */
+
+.footer {
+    background: #2b105e;
+    color: rgb(231, 229, 225);
+    padding-left: 3%;
+    /* margin-top: 5%; */
+    /* margin-top: 100%; */
+    /* align-items: flex-end; */
+    margin-top: 18%;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*  */
+
 @media (max-width: 320px) {
     #psbtn {
         background: #ff4d28;
