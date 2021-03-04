@@ -82,10 +82,13 @@
         eventEditForm["multiple"].checked = true
         eventEditForm["multiple"].parentElement.classList.add('active-radio')
         eventEditForm["single"].parentElement.classList.remove('active-radio')
+        eventEditForm["end-date"].disabled = false
       }
 
       eventEditForm["start-date"].value = event.startDate
       eventEditForm["end-date"].value = event.endDate
+      eventEditForm["start-time"].value = event.startTime
+      eventEditForm["end-time"].value = event.endTime
 
       // setup details 
       eventEditForm["event-image"].value = event.image
