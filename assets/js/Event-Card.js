@@ -8,6 +8,7 @@ template.innerHTML = `
             background: #fff;
             cursor: pointer;
             height: 100%;
+            width: 100%;
         }
         
         .card:hover {
@@ -89,6 +90,7 @@ class EventCard extends HTMLElement {
             if (!likeBtn.contains(e.target)) {
                 const id = card.getAttribute('data-id');
                 console.log(id);
+                location.href = `/eventDetail.html?id=${id}`
             }
         });
 
