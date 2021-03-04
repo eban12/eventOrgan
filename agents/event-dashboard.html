@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="../includes/dexieOffline.js" defer></script>
+    <script src="../includes/db.js" defer></script>
     <script src="assets/js/main.js" type="module" defer></script>
     <script src="assets/js/eventDashboard.js" type="text/javascript" defer></script>
     <title>Document</title>
@@ -53,7 +55,7 @@
                 </li>
             </ul>
         </aside>
-        <form class="event-dashboard__content">
+        <form class="event-dashboard__content" id="even-edit-form">
             <div id="event-dashboard__basic-info" class="event-dashboard__active dashboard-menu">
                 <section class="create-section"> 
                     <div class="icon">
@@ -205,7 +207,7 @@
                             <input type="url" placeholder="https://example.png/(jpg)" id="event-image">
                                 <label for="event-title">Event image</label>
                             </input>
-                            <img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg" alt="" srcset="" id="event-image-preview">
+                            <img src="" alt="" srcset="" id="event-image-preview">
                         </div>
                     </div>
                 </section>
@@ -217,11 +219,6 @@
                     <div class="content">
                         <h1 class="title">Description</h1>
                         <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
-        
-                        <div class="input-group">
-                            <label for="event-sammary" id="summary-lable">Summary</label>
-                            <textarea type="" id="event-sammary" ></textarea>
-                        </div>
                         <div id="editor"></div>
                     </div>
                 </section>
@@ -240,6 +237,11 @@
                         </div>
                     </div>
                 </section>
+            </div>
+
+            <div class="modify">
+                <button class="btn btn-outline" type="reset">Cancel</button>
+                <button class="btn btn-primary" type="submit">Save</button>
             </div>
         </form>
     </main>
