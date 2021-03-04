@@ -69,22 +69,22 @@ template.innerHTML = `
         <div class="card__body">
             <button class="like__btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
             <h3 class="event__date"></h3>
-            <h2 class="event__name"></h2>
+            <h2 class="event__name" id="eventName"></h2>
         </div>
     </div>
 
 `
 
 class EventCard extends HTMLElement {
-    constructor() {
-        super();
-        this.root = this.attachShadow({mode: 'open'});
-    }
+    // constructor() {
+    //     super();
+    //     this = this.attachShadow({mode: 'open'});
+    // }
 
     connectedCallback() {
-        const card = this.root.querySelector('.card');
-        const likeBtn = this.root.querySelector('.like__btn');
-        const likeIcon = this.root.querySelector('i');
+        const card = this.querySelector('.card');
+        const likeBtn = this.querySelector('.like__btn');
+        const likeIcon = this.querySelector('i');
 
         card.addEventListener('click', (e) => {
             if (!likeBtn.contains(e.target)) {
@@ -107,7 +107,7 @@ class EventCard extends HTMLElement {
         template.content.querySelector('.event__image').setAttribute('src', cardObj.image);
         template.content.querySelector('.event__date').textContent =  cardObj.date;
         template.content.querySelector('.event__name').textContent = cardObj.name;
-        this.root.appendChild(template.content.cloneNode(true));    
+        this.appendChild(template.content.cloneNode(true));    
     }
 } 
 
