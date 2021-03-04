@@ -11,6 +11,8 @@
                 venue: getVenu(),
                 startDate: form["start-date"].value,
                 endDate: form["end-date"].value,
+                startTime: form["start-time"].value,
+                endTime: form["end-time"].value,
                 image: "",
                 description: "",
                 agentId: 1,
