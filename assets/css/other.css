@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,19 +12,12 @@ body {
     color: #06072cd0;
 }
 
-header {
-    height: 50px;
-    background: #fff;
-    z-index: 12;
-    border-bottom: 1px solid gray;
-}
-
 main {
     padding: 35px;
 }
 
 .event__detail-background {
-    background: url("https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F125073173%2F485586024857%2F1%2Foriginal.20210203-193029?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C5000%2C2500&s=66104b87a58c2572cab3b1cc16c5928e");
+    /* background: url("https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F125073173%2F485586024857%2F1%2Foriginal.20210203-193029?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C58%2C5000%2C2500&s=66104b87a58c2572cab3b1cc16c5928e"); */
     filter: blur(25px);
     position: absolute;
     top: 0;
@@ -55,11 +49,13 @@ main {
     margin-bottom: 20px;
 }
 
-.row {
+
+.flex {
     display: flex;
     justify-content: space-between;
     height: auto;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .detail__side-1 {
@@ -74,6 +70,7 @@ main {
 
 .detail__side-2 {
     width: 30%;
+    
 }
 
 .detail__header-side-2 {
@@ -113,7 +110,7 @@ main {
 
 .detail__price {
     position: absolute;
-    bottom: 25px;
+    bottom: 5px;
     left: 25px;
 }
 
@@ -142,6 +139,7 @@ main {
 .btn-primary {
     color: #fff;
     background: #0e8548;
+    
 }
 
 .detail__ticketbar .btn {
@@ -195,7 +193,7 @@ event-card {
     height: 100vh;
     background: #fff;
     padding: 40px;
-}
+} 
 
 .interests__side1 h1 {
     font-size: 48px;
@@ -248,113 +246,3 @@ event-card {
     color: #fff;
 }
 
-section p {
-    font-size: 12px;
-}
-
-@media (max-width: 325px) {
-    .detail__side-2 {
-        width: 400px;
-    }
-    .detail__event-info {
-        margin-top: 10px;
-        margin-left: -18px;
-        width: fit-content;
-    }
-    .detail__side-1 img {
-        width: 20px;
-        height: 20px;
-        background: green;
-    }
-}
-
-@media (max-width: 375px) {
-    h1 {
-        font-size: 0px;
-    }
-    p {
-        font-size: 8px;
-    }
-    .interests__side1 {
-        width: 0%;
-        height: 30vh;
-        background: white;
-        width: fit-content;
-    }
-    .interests__side1 p {
-        line-height: 14px;
-        font-weight: 5;
-        margin-top: 10px;
-        font-size: 15px;
-    }
-    .interests__side1 h1 {
-        font-size: 25px;
-        margin-top: 20px;
-    }
-    .interests__side-2 {
-        flex: 1;
-        min-height: 100%;
-        margin-top: -30px;
-        width: fit-content;
-    }
-    .input__group {
-        display: block;
-        width: 100%;
-    }
-    .detail__side-1 img {
-        width: 230px;
-        height: 120px;
-    }
-    .detail__event-date {
-        width: 50px;
-        text-align: center;
-        margin-top: 1px;
-        font-weight: 100px;
-        font-size: 15px;
-        margin-left: -1rem;
-    }
-    .detail__event-date .day {
-        font-size: 15px;
-    }
-    .detail__event-info {
-        margin-top: 10px;
-        margin-left: -17px;
-        width: fit-content;
-    }
-    .detail__event-title {
-        font-size: 18px;
-        font-weight: 100;
-    }
-    /*
-    .detail__side-2 {
-        width: fit-content;
-    } */
-}
-
-@media (max-width: 425px) {
-    .detail__side-2 {}
-    .detail__event-info {
-        margin-top: 10px;
-        margin-left: -18px;
-        width: fit-content;
-    }
-}
-
-@media(max-width: 768px) {
-    #foot {
-        color: white;
-        margin-left: -18rem;
-        text-align: center;
-        margin-top: 0rem;
-    }
-    .footer {
-        background: #2b105e;
-        color: rgb(231, 229, 225);
-        padding-left: 3%;
-        padding-left: 80%;
-        margin-top: 18%;
-        text-align: left;
-        font-size: 15px;
-        font-family: 'Roboto', sans-serif;
-    }
-}
