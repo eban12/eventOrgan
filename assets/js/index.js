@@ -1,6 +1,8 @@
 import "./Event-Card.js";
 const eventsContainer = document.querySelector('.events_container');
 
+const events = db.users;
+console.log(events);
 if (eventsContainer) {
     for (let i = 0; i < 20; i++) {
         const card = document.createElement('event-card');
