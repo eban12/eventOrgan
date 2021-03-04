@@ -13,7 +13,8 @@
                 endDate: form["end-date"].value,
                 image: "",
                 description: "",
-                agentId: 1
+                agentId: 1,
+                isPublished: false
             }
 
             let id = await db.events.add(event)
