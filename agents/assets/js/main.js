@@ -45,6 +45,7 @@ import "../../components/Ticket.js";
 
               if (el === singleEvent) {
                 endDate.disabled = true;
+                endDate.value = "";
               } else if (radios.parentElement.contains(endDate)) {
                 endDate.disabled = false;
               }
