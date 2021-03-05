@@ -246,3 +246,7 @@ event-card {
     color: #fff;
 }
 
+.form-check-label {
+    font-weight: 500;
+    margin-left: 10px;
+}

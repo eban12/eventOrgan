@@ -13,7 +13,7 @@ const eventLocation = document.querySelector('.detail__location');
 const footer = document.querySelector('.detail__footer');
 const content = document.querySelector('.detail__body-side-1');
 const DEFAULT_IMAGE = "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg"
-
+const modalBody = document.querySelector('.modal-body');
 
 function getMonthName(month) {
     switch(month) {
@@ -44,6 +44,22 @@ function getMonthName(month) {
     }
 }
 
+function loadTickets(tickets) {
+    console.log(tickets)
+    tickets.forEach(ticket => {
+        if (ticket.quantity > 0) {
+            let div = document.createElement('div')
+            div.classList.add('form-check')
+            div.innerHTML =`
+                <input class="form-check-input" type="checkbox" value="${ticket.id}" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    ${ticket.title}, price: ${ticket.price}$, ${ticket.endTime} 
+                </label>
+            `
+        }
+    })
+}
+
 async function loadEvent() {
         const urlParams = new URLSearchParams(window.location.search);
         const id = Number(urlParams.get("id"));
@@ -66,6 +82,10 @@ async function loadEvent() {
             <p>${agent.username}</p>
             <p>Organizer of ${event.title}</p>
         `
+
+
+        const tickets = await db.tickets.where({eventId: event.id}).toArray()
+        modalBody.innerHTML = tickets.length != 0 ? loadTickets(tickets): '<p style="text-align: center">No tickets available</p>'
     }
 
 loadEvent()
