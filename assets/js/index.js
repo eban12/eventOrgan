@@ -1,5 +1,16 @@
 import "./Event-Card.js";
 const eventsContainer = document.querySelector('.events_container');
+const loginButton = document.querySelector('#login');
+const userDropdown = document.querySelector('#user-account');
+const logoutButton = document.querySelector('#logout')
+
+const user = Number(localStorage.getItem('userId'))
+
+if (user > 0) {
+    loginButton.style.display = "none"
+} else {
+    userDropdown.style.display = "inline-block"
+}
 
 if (eventsContainer) {
     for (let i = 0; i < 20; i++) {
