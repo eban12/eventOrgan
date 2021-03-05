@@ -98,7 +98,7 @@
       `
 
       // publishe or not
-      if (EVENT.isPublished) {
+      if (!EVENT.isPublished) {
         publishBtn.innerHTML = "Publish"
       } else {
         publishBtn.innerHTML = "Unpublish"

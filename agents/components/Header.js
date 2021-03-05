@@ -119,7 +119,7 @@ li a:hover {
             <div class="dropdown">
                 <ul>
                     <li><a><i class="fa fa-cog" aria-hidden="true"></i> Account Settings</a></li>
-                    <li><a><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></li>
+                    <li><a id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></li>
                 </ul>
             </div>
         </div>
@@ -149,6 +149,12 @@ class Header extends HTMLElement {
   connectedCallback() {
     const root = this.attachShadow({ mode: "closed" });
     root.appendChild(template.content);
+
+    root.querySelector("#logout").addEventListener('click', () => {
+        localStorage.setItem("userId", 0)
+        localStorage.setItem("userType", "")
+        location.reload()
+    })
   }
 }
 
