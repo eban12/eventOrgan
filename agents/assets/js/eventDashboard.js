@@ -8,6 +8,7 @@
     const ticketBtn = addTicketForm.querySelector('button')
     const dashboardTitle = document.querySelector('.event-dashboard__event-title')
     const publishBtn = document.querySelector('#publish')
+    const addTicketButton = document.querySelector('#addTicket')
     const DEFAULT_IMAGE = "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg"
     let EVENT;
     let editor;
@@ -26,7 +27,7 @@
 
       addTicketForm.addEventListener('submit', async (e) => {
           e.preventDefault();
-          
+
           let unit = addTicketForm["ticket-sell-end-timeunit"].value;
           const ticketVals = {
             title: addTicketForm["ticket-name"].value,
@@ -37,7 +38,8 @@
             price: Number(addTicketForm["ticket-price"].value),
           }
 
-          if (e.target.getAttribute('data-ticketId') === "") {
+
+          if (ticketBtn.getAttribute('data-ticketId') === "0") {
             const res = await db.tickets.add(ticketVals)
           } else {
             ticketVals.id = Number(ticketBtn.getAttribute('data-ticketId'))
@@ -78,6 +80,10 @@
             publishBtn.innerHTML = "Unpublish"
           }
         })
+
+        addTicketButton.addEventListener('click', (e) => {
+          ticketBtn.setAttribute('data-ticketId', "0")
+        }) 
     }
   
     async function loadEvent() {
