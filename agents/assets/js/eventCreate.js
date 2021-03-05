@@ -15,7 +15,7 @@
                 endTime: form["end-time"].value,
                 image: "",
                 description: "",
-                agentId: 1,
+                agentId: Number(localStorage.getItem('userId')),
                 isPublished: false
             }
 

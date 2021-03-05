@@ -2,7 +2,7 @@
     const tableBody = document.querySelector('.table-body');
 
     async function init() {
-        let events = await db.events.where({agentId: 1}).toArray()
+        let events = await db.events.where({agentId: Number(localStorage.getItem('userId'))}).toArray()
         console.log(events)
         events.forEach(event => {
 
