@@ -151,9 +151,9 @@ class Header extends HTMLElement {
     root.appendChild(template.content);
 
     root.querySelector("#logout").addEventListener('click', () => {
-        localStorage.setItem("userId", 0)
+        localStorage.setItem("userId", -1)
         localStorage.setItem("userType", "")
-        location.reload()
+        location.href = "../index.html"
     })
   }
 }

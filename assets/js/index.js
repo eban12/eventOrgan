@@ -9,8 +9,14 @@ const user = Number(localStorage.getItem('userId'))
 if (user > 0) {
     loginButton.style.display = "none"
 } else {
-    userDropdown.style.display = "inline-block"
+    userDropdown.style.display = "none"
 }
+
+logoutButton.addEventListener('click', () => {
+    localStorage.setItem('userId', -1)
+    localStorage.setItem('userType', "")
+    location.href = "/index.html"
+})
 
 const events = db.events;
 
