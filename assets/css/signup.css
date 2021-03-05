@@ -70,6 +70,75 @@
     font-size: 15px;
 }
 
+
+/* for footer */
+
+.footer {
+    background: #2b105e;
+    color: rgb(231, 229, 225);
+    padding-left: 3%;
+    /* margin-top: 5%; */
+    /* margin-top: 100%; */
+    /* align-items: flex-end; */
+    margin-top: 18%;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logofooter,
+img {
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+
+/*  */
+
+
+/* for contact page */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidenavbarr {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(248, 248, 248);
+}
+
+.sidenavbarr nav div ul {
+    padding-top: 2rem;
+    font-size: 15px;
+    display: block;
+}
+
+.sidenavbarr #this {
+    margin-top: 50px;
+    margin-left: 15px;
+    display: block;
+}
+
+.sidenavbarr #this li a {
+    color: rgb(14, 13, 13);
+    text-decoration: none;
+    margin-top: 30px;
+    margin-left: 40px;
+    display: block;
+    font-size: 20px;
+}
+
+.sidenavbarr #this a:hover {
+    background: rgb(75, 82, 75);
+    color: white;
+}
+
+
+/*  */
+
 @media (max-width: 320px) {
     #psbtn {
         background: #ff4d28;
@@ -85,6 +154,26 @@
         font-size: 15px;
         margin-left: 30px;
     }
+    .sidenavbar {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(248, 248, 248);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .sidenavbar #this a:hover {
+        background: rgb(75, 82, 75);
+        color: white;
+    }
+    .contacts {
+        margin-left: 1rem;
+        font-size: 12px;
+        display: block;
+    }
 }
 
 @media (max-width: 768px) {
@@ -96,5 +185,34 @@
         width: 15rem;
         font-size: 15px;
         margin-left: 4rem;
+    }
+    .footer {
+        background: #2b105e;
+        color: rgb(231, 229, 225);
+        padding-left: 3%;
+        padding-left: 80%;
+        margin-top: 18%;
+        text-align: left;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .sidenavbar {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(248, 248, 248);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .contacts {
+        margin-left: 1rem;
+        width: 10rem;
+        font-size: 12px;
+    }
+    form {
+        width: 18rem;
     }
 }
