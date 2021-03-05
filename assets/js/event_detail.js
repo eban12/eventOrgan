@@ -56,6 +56,7 @@ function loadTickets(tickets) {
                     ${ticket.title}, price: ${ticket.price}$, ${ticket.endTime} 
                 </label>
             `
+            modalBody.appendChild(div)
         }
     })
 }
@@ -85,7 +86,27 @@ async function loadEvent() {
 
 
         const tickets = await db.tickets.where({eventId: event.id}).toArray()
-        modalBody.innerHTML = tickets.length != 0 ? loadTickets(tickets): '<p style="text-align: center">No tickets available</p>'
+        if (tickets.length != 0) {
+            loadTickets(tickets)
+        } else{
+         '<p style="text-align: center">No tickets available</p>'
+        }
+        
+        checkoutBtn.addEventListener('click', () => {
+            console.log("checkout")
+            modalBody.querySelectorAll("form-check-input").forEach( async input => {
+                if (input.checked) {
+                    let ticket = input.value
+                    let res = await db.orders.add({
+                        userId: userId,
+                        eventId: event.id,
+                        agentId: event.agentId,
+                        ticketId: ticket
+                    })
+                    console.log("res", res)
+                }
+            })
+        })
     }
 
 loadEvent()
