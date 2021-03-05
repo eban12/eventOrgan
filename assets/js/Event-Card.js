@@ -89,7 +89,6 @@ class EventCard extends HTMLElement {
         card.addEventListener('click', (e) => {
             if (!likeBtn.contains(e.target)) {
                 const id = card.getAttribute('data-id');
-                console.log(id);
                 location.href = `/eventDetail.html?id=${id}`
             }
         });
@@ -104,7 +103,7 @@ class EventCard extends HTMLElement {
     set cardDetail(cardObj) {
         // console.log(cardObj);
         template.content.querySelector('.card').setAttribute('data-id', cardObj.id);
-        template.content.querySelector('.event__image').setAttribute('src', cardObj.image);
+        template.content.querySelector('.event__image').setAttribute('src', cardObj.image || "https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg");
         template.content.querySelector('.event__date').textContent =  cardObj.date;
         template.content.querySelector('.event__name').textContent = cardObj.name;
         this.appendChild(template.content.cloneNode(true));    
